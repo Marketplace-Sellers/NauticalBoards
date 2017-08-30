@@ -1,0 +1,10 @@
+<ul class="facet-option facet-rating {{#if selected}}is-open{{/if}} {{#unless start_collapsed}}is-open{{/unless}}" data-facet-filter-wrapper>
+  {{#each items}}
+    <li data-facet-item>
+      <a class="facet-select {{#if selected}}checked{{/if}}" href="{{url}}" rel="nofollow" data-faceted-search-facet>
+        {{> components/products/ratings rating=param_value}}
+        {{#if ../show_product_counts}}<span data-facet-item-count>({{count}})</span>{{/if}}
+      </a>
+    </li>
+  {{/each}}
+</ul>

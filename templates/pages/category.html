@@ -1,0 +1,56 @@
+---
+brands: true
+category:
+  shop_by_price: true
+  products:
+    limit: {{theme_settings.product-count}}
+---
+
+{{#partial "page"}}
+
+  <div class="container">
+      <h1 class="page-heading">{{category.name}}</h1>
+      {{> components/common/breadcrumbs
+        breadcrumbs
+      }}
+      
+    <div class="outcontent"> 
+        <div class="content">
+          {{#if theme_settings.show-category-description}}
+            <div class="page-description">{{{category.description}}}</div>
+          {{/if}}
+          {{#if theme_settings.show-category-image}}
+            <img src="{{getImage category.image 'original'}}"
+                 class="collection-product-image"
+                 alt="{{category.name}}" />
+          {{/if}}
+    
+          {{{snippet 'categories'}}}
+    
+          
+          <div class="collection-product-listing-header">
+            {{> components/products/product-listing-header
+              show_compare=category.show_compare
+            }}
+          </div>
+          <aside
+            class="sidebar
+            {{#unless category.faceted_search_enabled}}
+              sidebar-disabled
+            {{/unless}}"
+            data-category-sidebar
+          >
+            {{> components/category/sidebar}}
+          </aside>
+          <main class="collection-products product-listing" data-category>
+            {{> components/category/product-listing
+              show_compare=category.show_compare
+            }}
+          </main>
+        </div>
+    </div>
+  </div>
+
+{{/partial}}
+
+{{> layout/base}}

@@ -1,0 +1,10 @@
+
+<section class="products-new">
+  <h2 class="section-title">{{lang 'home.new_products'}}</h2>
+  {{#each this}}
+    {{> components/products/product-item this
+        default_image=../theme_settings.default_image
+        price_as_low_as=../theme_settings.price_as_low_as
+    }}
+  {{/each}}
+</section>

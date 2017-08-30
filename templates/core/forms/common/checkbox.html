@@ -1,0 +1,26 @@
+
+{{#if checkboxes}}
+  <div class="form-field form-field-common form-field-checkbox {{#if required}} form-required{{/if}}" id="{{id}}">
+    <div class="form-field-title">
+      {{label}}
+      {{#if required}}<span class="required-text">{{lang 'common.required'}}</span>{{/if}}
+    </div>
+
+    <div class="form-field-control">
+      {{#each checkboxes}}
+        <label class="form-label {{class}}">
+          <input
+            class="form-input form-checkbox"
+            id="checkbox-{{name}}"
+            name="{{name}}"
+            type="checkbox"
+            value="{{value}}"
+            {{#if checked}}checked{{/if}}
+            {{#if ../required}}required{{/if}}
+            aria-required="{{../required}}">
+          <span class="form-label-text">{{label}}</span>
+        </label>
+      {{/each}}
+    </div>
+  </div>
+{{/if}}

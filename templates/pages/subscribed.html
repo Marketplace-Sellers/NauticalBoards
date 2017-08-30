@@ -1,0 +1,27 @@
+---
+brands: true
+---
+
+{{#partial "page"}}
+
+  <div class="container">
+    <article class="content subscribed">
+      <h1 class="page-heading">
+        {{#if subscription.error}}
+          {{lang 'newsletter.subscribed_heading_error'}}
+        {{else}}
+          {{lang 'newsletter.subscribed_heading'}}
+        {{/if}}
+      </h1>
+      <div class="page-content">
+        {{#if subscription.error}}
+          {{> core/alerts/alert-error message=subscription.error}}
+        {{else}}
+          {{> core/alerts/alert-success message=(lang 'newsletter.subscribed_message')}}
+        {{/if}}
+      </div>
+    </article>
+  </div>
+
+{{/partial}}
+{{> layout/base}}

@@ -1,0 +1,121 @@
+---
+product:
+  reviews:
+    limit: 999
+  related_products:
+    limit: 4
+  videos: true
+---
+
+{{#partial "page"}}
+
+  {{> components/common/shipping-messages}}
+
+  <div class="product-wrap" data-product-container itemscope itemtype="http://schema.org/Product">
+    <div class="product-primary-wrapper">
+      {{> components/common/breadcrumbs breadcrumbs}}
+
+      <div class="product-primary">
+        <div class="product-images">
+          {{> components/products/images
+            images=product.images
+            default_image=../theme_settings.default_image
+          }}
+          {{> components/products/product-thumbnails product.images}}
+        </div>
+
+        <div class="product-details">
+          {{> components/products/product-details}}
+          {{> components/common/share-buttons
+            share_buttons=settings.add_this
+            url=product.url
+            title=product.title
+            image=(getImage product.main_image 'thumbnail')
+          }}
+        </div>
+      </div>
+    </div>
+
+    <div class="product-secondary-wrapper">
+
+      <nav class="product-tabs-menu">
+        <ul class="product-tabs-list" data-tabs>
+          <li class="product-tab-title"><a class="product-tab-link" href="#details">{{lang 'products.tabs.details'}}</a></li>
+          {{#if settings.show_product_rating}}
+            <li class="product-tab-title"><a class="product-tab-link" href="#user-reviews">{{lang 'products.tabs.reviews'}} ({{product.num_reviews}})</a></li>
+          {{/if}}
+          {{#if product.videos.featured}}
+            <li class="product-tab-title"><a class="product-tab-link" href="#videos">{{lang 'products.tabs.videos'}}</a></li>
+          {{/if}}
+        </ul>
+        {{#any
+          settings.show_product_rating
+          product.description
+          product.detail_messages
+          product.videos.featured
+        }}
+          <div class="form-select-wrapper">
+            <select class="product-tabs-select form-select" data-tabs>
+              <option class="product-tab-link" value="#details">{{lang 'products.tabs.details'}}</option>
+              {{#if settings.show_product_rating}}
+                <option class="product-tab-link" value="#user-reviews">{{lang 'products.tabs.reviews'}} ({{product.num_reviews}})</option>
+              {{/if}}
+              {{#if product.videos.featured}}
+                <option class="product-tab-link" value="#videos">{{lang 'products.tabs.videos'}}</option>
+              {{/if}}
+            </select>
+          </div>
+        {{/any}}
+      </nav>
+
+      <div class="product-tabs tabs-content">
+        <div class="tab-content-panel rte" id="details">
+          {{#if product.description}}
+            <div class="product-description" itemprop="description">
+              {{{product.description}}}
+              {{{snippet 'product_description'}}}
+            </div>
+          {{/if}}
+          {{#if product.detail_messages}}
+            <div class="product-description">
+              {{{product.detail_messages}}}
+            </div>
+          {{/if}}
+        </div>
+        {{#if settings.show_product_rating}}
+          <div class="tab-content-panel" id="user-reviews">
+            <div class="product-reviews">
+              <h3 class="section-title">{{lang 'product.reviews.customer_reviews'}} ({{product.num_reviews}})</h3>
+              {{> components/products/reviews reviews=product.reviews}}
+            </div>
+          </div>
+        {{/if}}
+        {{#if product.videos.featured}}
+          <div class="tab-content-panel" id="videos">
+            {{#each product.videos.list}}
+              <div class="product-video-wrapper">
+                <iframe src="https://www.youtube.com/embed/{{id}}?rel=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+      {{{snippet 'product_details'}}}
+    </div>
+  </div>
+
+  {{> components/products/products-related products=product.related_products quick_shop=../theme_settings.product-quick-shop}}
+
+  {{#each product.reviews.messages}}
+    <div class="product-review-messages" data-review-messages>
+      {{#if error}}
+        {{> core/alerts/alert-error message=error dismissable=true}}
+      {{/if}}
+      {{#if success}}
+        {{> core/alerts/alert-success message=success dismissable=true}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+{{/partial}}
+{{> layout/base}}

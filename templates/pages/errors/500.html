@@ -1,0 +1,40 @@
+---
+products:
+  featured:
+    limit: 4
+---
+
+{{#partial "page"}}
+
+<div class="container">
+  <article class="content">
+    <h1 class="page-heading">{{lang 'errors.server_error.title'}}</h1>
+
+    <div class="page-wrapper-error">
+      <div class="error-search">
+        <p>{{lang 'errors.server_error.message'}}</p>
+      </div>
+
+      {{#if products.featured.length}}
+        <div class="products-featured-wrap">
+          <section class="products-featured">
+            <h2 class="section-title">{{lang 'home.featured_products'}}</h2>
+            <div class="product-grid grid-4">
+              {{#each products.featured}}
+                {{> components/products/product-item
+                  this
+                  default_image=../theme_settings.default_image
+                }}
+              {{/each}}
+            </div>
+          </section>
+        </div>
+      {{/if}}
+
+    </div>
+
+  </article>
+</div>
+
+{{/partial}}
+{{> layout/base}}

@@ -1,0 +1,38 @@
+
+<section class="carousel">
+  {{#each carousel.slides}}
+    <figure class="carousel-item">
+     {{#if url}}
+        <a class="carousel-item-image-link" href="{{{url}}}">
+          <img class="carousel-item-image" src="{{image}}" alt="{{{alt_text}}}" />
+        </a>
+      {{else}}
+        <img class="carousel-item-image" src="{{image}}" alt="{{{alt_text}}}" />
+      {{/if}}
+      {{#any
+        heading
+        text
+        button_text
+      }}
+        <figcaption class="carousel-item-info">
+          {{#if heading}}
+            <h2 class="carousel-heading">{{{heading}}}</h2>
+          {{/if}}
+          {{#if text}}
+            <p class="carousel-caption">{{{text}}}</p>
+          {{/if}}
+          {{#if button_text}}
+            <a class="button carousel-button" href="{{#if url}}{{url}}{{else}}#{{/if}}">{{{button_text}}}</a>
+          {{/if}}
+        </figcaption>
+      {{/any}}
+    </figure>
+  {{/each}}
+
+  {{#if carousel.slides.length '>' 1}}
+    <div class="carousel-navigation">
+      <span class="carousel-navigation-item carousel-previous">{{> components/common/icons/left-arrow}}</span>
+      <span class="carousel-navigation-item carousel-next">{{> components/common/icons/right-arrow}}</span>
+    </div>
+  {{/if}}
+</section>

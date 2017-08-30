@@ -1,0 +1,19 @@
+{{#if category.products}}
+  <form class="form" action="/compare" method="POST">
+    <div class="product-grid grid-{{theme_settings.products-per-row}}">
+      {{#each category.products}}
+        {{> components/products/product-item
+          this
+          show_compare=../show_compare
+          default_image=../theme_settings.default_image
+          quick_shop=../theme_settings.product-quick-shop
+          price_as_low_as=../theme_settings.price_as_low_as
+        }}
+      {{/each}}
+    </div>
+  </form>
+{{/if}}
+
+{{#if category.products.length}}
+  {{> components/common/pagination pagination.category}}
+{{/if}}

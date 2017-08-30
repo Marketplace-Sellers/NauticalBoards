@@ -1,0 +1,17 @@
+{{#partial "page"}}
+
+<div class="container">
+  <article class="content">
+
+    <h1 class="page-heading">{{lang 'common.my_account'}}</h1>
+    {{> components/common/breadcrumbs breadcrumbs}}
+
+    <div class="account-content">
+      {{> core/account/return-saved}}
+    </div>
+  </article>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

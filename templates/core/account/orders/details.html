@@ -1,0 +1,57 @@
+{{!
+  Markup and styles related to this page use `receipt` instead of
+  `order-details`. Receipt is shorter and doesn't conflict with other "details"
+  sections.
+}}
+
+{{#partial 'account-heading'}}
+  {{lang 'core.account.receipt.heading' number=order.id}}
+{{/partial}}
+
+{{#partial 'account-toolbar'}}
+  <a class="account-tool" href="{{order.invoice_url}}" target="_blank">{{lang 'core.account.receipt.actions.print_invoice'}}</a>
+
+  <form class="account-order-invoice" action="{{order.reorder_url}}" method="post">
+    <input type="hidden" name="orderid" value="{{order.id}}">
+    {{#each order.items}}
+      <input type="hidden" name="reorderitem[{{order_product_id}}]">
+    {{/each}}
+    <input class="account-tool" type="submit" value="{{lang 'core.account.receipt.actions.reorder_items'}}">
+  </form>
+
+  {{#if order.is_complete}}
+    {{#if order.returns_enabled}}
+      <a href="{{order.return_url}}" class="account-tool">{{lang 'core.account.receipt.actions.return_items'}}</a>
+    {{/if}}
+  {{/if}}
+{{/partial}}
+
+{{#partial 'account-content'}}
+  {{! Summary }}
+  {{> core/account/_private/receipt-summary}}
+
+  {{! Comments }}
+  {{#if order.comments}}
+    <section class="account-receipt-comments account-card">{{order.comments}}</section>
+  {{/if}}
+
+  {{! Shipments }}
+  {{> core/account/_private/receipt-shipments}}
+
+  {{! Products }}
+  {{> core/account/_private/receipt-items}}
+
+  {{! Totals }}
+  <div class="account-receipt-totals">
+    {{#each order.total_rows}}
+      {{#if value.value}}
+        <div class="account-receipt-total">
+          <div class="account-receipt-total-title">{{label}}</div>
+          <div class="account-receipt-total-value">{{value.formatted}}</div>
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+{{/partial}}
+
+{{> core/account/_private/layout nav_page='orders' class='orders-receipt'}}

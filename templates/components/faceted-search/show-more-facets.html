@@ -1,0 +1,14 @@
+<ul class="collection-facet-list-additional" data-additional-facets-list>
+  {{#each facets}}
+    {{#if facet '===' ../all_facets}}
+      {{#each items}}
+        <li data-facet-item>
+          <a class="facet-select {{#if selected}}checked{{/if}}" href="{{url}}" rel="nofollow" data-faceted-search-facet>
+            {{title}}
+            {{#if ../show_product_counts}}<span data-facet-item-count>({{count}})</span>{{/if}}
+          </a>
+        </li>
+      {{/each}}
+    {{/if}}
+  {{/each}}
+</ul>

@@ -1,0 +1,28 @@
+<div class="product-main-image">
+  {{#if images}}
+    {{#each images}}
+      <a
+        href="{{getImage this 'product-x-large' (cdn default_image)}}"
+        class="product-slide {{#if @first}}active{{/if}}"
+        {{#if this.alt '!=' this.title}}
+          data-caption="{{this.alt}}"
+        {{/if}}
+        data-slide-num={{@index}}
+      >
+        <img
+          class="product-image"
+          src="{{getImage this 'large' (cdn default_image)}}"
+          alt="{{this.alt}}"
+          title="{{this.alt}}"
+        >
+      </a>
+    {{/each}}
+  {{else}}
+    <img
+      class="product-image"
+      src="{{getImage this 'large' (cdn default_image)}}"
+      alt="{{this.alt}}"
+      title="{{this.alt}}"
+    >
+  {{/if}}
+</div>

@@ -1,0 +1,44 @@
+---
+brands:
+  limit: {{theme_settings.brands_per_page}}
+---
+
+{{#partial "page"}}
+
+  <div class="container">
+    <div class="content">
+      <h1 class="page-heading">{{lang 'brand.label'}}</h1>
+
+      {{> components/common/breadcrumbs breadcrumbs}}
+
+      <section class="brands-grid grid-4">
+
+        {{#each brands}}
+          <article class="brand-item">
+            {{#if ../theme_settings.brands-images}}
+              <figure class="brand-image-container">
+                <a class="brand-link" href="{{url}}">
+                  {{#if image}}
+                    <img class="brand-image" src="{{getImage image 'small'}}" alt="{{name}}">
+                  {{/if}}
+                </a>
+              </figure>
+            {{else}}
+              <h3 class="brand-item-title">
+                <a class="brand-link" href="{{url}}">{{name}}</a>
+              </h3>
+            {{/if}}
+          </article>
+        {{/each}}
+
+      </section>
+
+      {{#if brands}}
+        {{> components/common/pagination pagination.brands}}
+      {{/if}}
+    </div>
+  </div>
+
+{{/partial}}
+
+{{> layout/base}}

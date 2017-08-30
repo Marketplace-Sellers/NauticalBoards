@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="{{ locale_name }}">
+<head>
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
+
+  <title>{{head.title}}</title>
+
+  {{{head.meta_tags}}}
+  {{{head.config}}}
+
+<!-- Begin Inspectlet Embed Code -->
+<script type="text/javascript" id="inspectletjs">
+window.__insp = window.__insp || [];
+__insp.push(['wid', 383996364]);
+(function() {
+function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+})();
+</script>
+<!-- End Inspectlet Embed Code -->
+
+  <link href="{{head.favicon}}" rel="shortcut icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <style type="text/css">
+    @font-face {
+      font-family: "Social Icons";
+      src: url({{cdn "assets/pxu-social.eot"}});
+      src: url({{cdn "assets/pxu-social.woff"}}) format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  {{{stylesheet '/assets/css/theme.css'}}}
+  {{ getFontsCollection }}
+
+  {{{head.scripts}}}
+  {{{head.rsslinks}}}
+  {{inject 'themeImageSizes' theme_settings._images}}
+  {{> components/global-injects}}
+  {{{snippet 'htmlhead'}}}
+  {{#if page_type '===' 'product'}}
+    {{> components/common/facebook-like}}
+  {{else if page_type '===' 'blog' }}
+    {{> components/common/facebook-like}}
+  {{else if page_type '===' 'blog_post' }}
+    {{> components/common/facebook-like}}
+  {{/if}}
+</head>
+
+<body class="{{page_type}} {{#unless in_production}}dev-environment{{/unless}}">
+  {{{snippet 'header'}}}
+
+  {{> components/common/banners banners location="top"}}
+
+  {{> components/header}}
+
+  <main class="main-content">
+    {{#block "page"}}{{/block}}
+  </main>
+
+  <script src="{{cdn '/assets/js/bundle.js'}}"></script>
+  <script>
+    // Exported in app.js
+    window.stencilBootstrap("{{template_file}}", {{jsContext}}).load();
+  </script>
+
+  {{> components/footer}}
+
+  {{> components/common/banners banners location="bottom"}}
+
+  {{{footer.scripts}}}
+  {{{snippet 'footer'}}}
+</body>
+</html>

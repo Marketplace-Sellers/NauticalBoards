@@ -1,0 +1,11 @@
+{{#if category.products}}
+  <form class="form" action="/compare" method='POST'>
+    {{#each category.products}}
+      {{name}}
+    {{/each}}
+  </form>
+{{else}}
+  <div>
+    {{lang 'category.empty'}}
+  </div>
+{{/if}}

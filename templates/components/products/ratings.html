@@ -1,0 +1,12 @@
+
+<div class="product-rating">
+  <div class="rating-stars-readonly" aria-hidden="true">
+    {{#for 1 5}}
+      <i class="rating-star {{#if ../rating '>=' $index}}star-full{{else}}star-empty{{/if}}"></i>
+    {{/for}}
+  </div>
+  <span class="rating-total-score sr-only">{{this.rating}}</span>
+  {{#if aggregate}}
+    <a class="rating-total-votes" href="#user-reviews">({{product.num_reviews}})</a>
+  {{/if}}
+</div>

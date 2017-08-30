@@ -1,0 +1,1 @@
+{"checkout.scss":"/*! Theme: Chelsea v1.14.0 */\n.header-logo {\n  display: block;\n  width: 200px;\n\n  > a {\n    display: inline-block;\n\n    > img { width: 100%; }\n  }\n}\n"}

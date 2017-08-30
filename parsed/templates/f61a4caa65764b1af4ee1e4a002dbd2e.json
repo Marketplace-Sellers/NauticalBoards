@@ -1,0 +1,1 @@
+{"components/faceted-search/facets/product-listing":"{{#if category.products}}\n  <form class=\"form\" action=\"/compare\" method='POST'>\n    {{#each category.products}}\n      {{name}}\n    {{/each}}\n  </form>\n{{else}}\n  <div>\n    {{lang 'category.empty'}}\n  </div>\n{{/if}}\n"}

@@ -1,0 +1,52 @@
+
+<header class="main-header {{theme_settings.logo-position}} {{theme_settings.menu-type}} {{theme_settings.header-layout}}" role="banner">
+
+  <div class="primary-navigation">
+
+    <button class="nav-menu-toggle"><span class="icon"></span><span class="text">Menu</span></button>
+    {{#if theme_settings.header-layout '===' 'split-menu'}}
+      {{> components/brand/logo}}
+    {{/if}}
+
+    {{> components/navigation}}
+
+  </div>
+
+  <div class="header-tools">
+
+    {{#if theme_settings.header-layout '===' 'split-menu'}}
+      {{> components/currency-selector}}
+    {{/if}}
+
+    {{#if theme_settings.header-layout '===' 'no-split-menu'}}
+      {{#if theme_settings.logo-position '===' 'logo-center'}}
+        {{> components/currency-selector}}
+      {{/if}}
+    {{/if}}
+
+    {{#if theme_settings.header-layout '===' 'no-split-menu'}}
+      {{> components/brand/logo}}
+    {{/if}}
+
+    <div class="shopping-tools">
+      {{#if theme_settings.header-layout '===' 'no-split-menu'}}
+        {{#if theme_settings.logo-position '!==' 'logo-center'}}
+          {{> components/currency-selector}}
+        {{/if}}
+      {{/if}}
+      <a class="shopping-links cart-preview-trigger" data-cart-count="{{cart.quantity}}" href="{{urls.cart}}">
+        <span class="cart-quantity" id="cart-preview-count">{{cart.quantity}}</span>
+        <span class="cart-label">{{lang 'cart_preview.label'}}</span>
+      </a>
+
+      <div class="cart-preview-wrap" id="cart-preview-container" data-cart-preview-wrap>
+        {{> components/cart-preview}}
+      </div>
+
+      {{> components/account-links}}
+
+      <span class="search-toggle">{{lang 'header.search'}}{{> components/common/icons/search}}</span>
+    </div>
+  </div>
+
+</header>

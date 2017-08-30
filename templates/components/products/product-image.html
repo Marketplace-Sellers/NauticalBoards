@@ -1,0 +1,16 @@
+<div class="product-main-image">
+  <a
+    href="{{getImage product_image 'product-x-large' 'large' default_image}}"
+    class="product-slide"
+    {{#if product_image.alt '!=' ../product_image.title}}
+      data-caption="{{product_image.alt}}"
+    {{/if}}
+  >
+    <img
+      class="product-image"
+      src="{{getImage product_image 'large' default_image}}"
+      alt="{{product_image.alt}}"
+      title="{{product_image.alt}}"
+    >
+  </a>
+</div>

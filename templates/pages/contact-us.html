@@ -1,0 +1,21 @@
+{{#partial "page"}}
+
+<div class="container">
+  <article class="content contact-us">
+    <h1 class="page-heading">{{page.title}}</h1>
+    <div class="page-content">
+      {{#if forms.contact.success}}
+        <p>{{{lang 'contact.successful' shopPath=urls.home}}}</p>
+      {{else}}
+        <p>{{{page.content}}}</p>
+      {{/if}}
+      {{#unless forms.contact.success}}
+        {{> core/forms/form-contact-us}}
+      {{/unless}}
+    </div>
+  </article>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}

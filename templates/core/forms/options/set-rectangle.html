@@ -1,0 +1,24 @@
+
+<div class="form-field form-field-options form-field-rectangle{{#if required}} form-required{{/if}}"
+  data-product-attribute="set-rectangle">
+  <div class="form-field-title">
+    {{display_name}}
+    {{#if required}}<span class="required-text">{{lang 'common.required'}}</span>{{/if}}
+  </div>
+  <div class="form-field-control">
+    {{#each values}}
+      <label class="form-label rectangle" data-product-attribute-value="{{id}}">
+        <input
+          class="form-input form-rectangle"
+          name="attribute[{{../id}}]"
+          id="attribute-{{id}}"
+          type="radio"
+          value="{{id}}"
+          {{#if selected}}checked{{/if}}
+          {{#if ../required}}required{{/if}}
+          aria-required="{{required}}">
+        <span class="rectangle-text form-label-text">{{label}}</span>
+      </label>
+    {{/each}}
+  </div>
+</div>

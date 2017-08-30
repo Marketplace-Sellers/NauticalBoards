@@ -1,0 +1,130 @@
+{{#if cart.items.length}}
+
+  {{#if cart.status_messages.length}}
+    {{#each cart.status_messages}}
+      {{#if type "!=" 2}}
+        {{> core/alerts/alert-success message=message dismissable=true}}
+      {{/if}}
+    {{/each}}
+  {{/if}}
+
+  <div data-coupon-errors></div>
+  <div data-gift-certificate-errors></div>
+
+  <div class="cart-footer-control">
+
+    <div class="cart-footer-left">
+      {{> components/cart/coupon-codes}}
+      {{#if settings.gift_certificates_enabled}}
+        {{> components/cart/gift-certificates}}
+      {{/if}}
+    </div>
+
+    <div class="cart-footer-right">
+
+      <div class="cart-totals-row order-subtotal">
+        {{lang 'cart.subtotal'}}<span class="cart-total-price">{{cart.sub_total.formatted}}</span>
+      </div>
+
+      {{#if cart.coupons}}
+        <div class="cart-totals-row" data-coupon-codes>
+          <ul class="cart-coupon-codes">
+            {{#each cart.coupons}}
+              <li>
+                <div class="cart-totals-label">
+                  {{lang 'cart.coupon_codes.label' code=code}}
+                  <a class="cart-code-remove" href="{{remove_url}}">{{lang 'cart.coupon_codes.remove'}}</a>
+                </div>
+                <div class="cart-totals-value">
+                  {{discount.formatted}}
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/if}}
+
+      {{#if cart.gift_certificates}}
+        <div class="cart-totals-row">
+          {{#each cart.gift_certificates}}
+            <ul class="cart-gift-certificates">
+              <li>
+                <div class="cart-totals-label">
+                  {{lang 'cart.gift_certificates.label' code=code}} ({{remaining.formatted}})
+                  <a class="cart-code-remove" href="{{remove_url}}">{{lang 'cart.gift_certificates.remove'}}</a>
+                </div>
+                <div class="cart-totals-value">
+                  {{used.formatted}}
+                </div>
+              </li>
+            </ul>
+          {{/each}}
+        </div>
+      {{/if}}
+
+      {{#if cart.gift_wrapping_cost.value ">" 0}}
+        <div class="cart-totals-row">
+          <div class="cart-totals-label">{{lang 'cart.gift_wrapping.title'}}</div>
+          <div class="cart-totals-value">
+            <span class="value-price">
+              {{cart.gift_wrapping_cost.formatted}}
+            </span>
+          </div>
+        </div>
+      {{/if}}
+
+      {{#if cart.discount.value "<" 0}}
+        <div class="cart-totals-row">
+          <div class="cart-totals-label">{{lang 'cart.discount'}}</div>
+          <div class="cart-totals-value">
+            <span class="value-price">
+              {{cart.discount.formatted}}
+            </span>
+          </div>
+        </div>
+      {{/if}}
+
+      {{#if cart.shipping_handling.show_estimator}}
+        <div class="cart-totals-row">
+          {{> components/cart/shipping-calculator cart.shipping_handling}}
+        </div>
+      {{/if}}
+
+      {{#each cart.taxes}}
+        <div class="cart-totals-row">
+          <div class="cart-totals-label">{{name}}</div>
+          <div class="cart-totals-value">
+            <span class="value-price">
+              {{cost.formatted}}
+            </span>
+          </div>
+        </div>
+      {{/each}}
+
+      <div class="cart-totals-row order-total">
+        {{lang 'cart.total'}}<span class="cart-total-price">{{cart.grand_total.formatted}}</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="checkout-row">
+
+    <div class="cart-checkout-buttons">
+      <a class="checkout-button button" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout'}}">{{lang 'cart.checkout'}}</a>
+    </div>
+
+    {{#if cart.additional_checkout_buttons.length}}
+      <div class="cart-additional-checkout-buttons">
+        {{#each cart.additional_checkout_buttons}}
+          {{{this}}}
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+
+  <span class="spinner"></span>
+
+{{else}}
+  <div>{{! need an empty div so this template can be pulled in via ajax.}}</div>
+{{/if}}

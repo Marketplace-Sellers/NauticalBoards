@@ -1,0 +1,37 @@
+---
+products:
+  featured:
+    limit: 4
+---
+
+{{#partial "page"}}
+
+  {{> components/common/shipping-messages}}
+
+  <div class="container">
+
+    <div class="content">
+
+      {{#if cart.items}}
+        <h1 class="page-heading">{{lang 'cart.title'}}</h1>
+
+        <div class="cart-content" data-cart-content>
+          {{> components/cart/content}}
+        </div>
+
+        <div class="cart-footer" data-cart-totals>
+          {{> components/cart/totals}}
+        </div>
+
+      {{else}}
+        <h1 class="page-heading">{{lang 'cart.empty'}}</h1>
+        <p class="empty-cart"><a href="{{urls.home}}">{{lang 'cart.empty_message'}}</a></p>
+      {{/if}}
+
+      {{{snippet 'cart'}}}
+    </div>
+
+  </div>
+
+{{/partial}}
+{{> layout/base}}

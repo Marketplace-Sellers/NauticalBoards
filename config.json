@@ -1,0 +1,440 @@
+{
+  "name": "Chelsea - joe edits 2",
+  "version": "1.14.0",
+  "css_compiler": "scss",
+  "autoprefixer_cascade": true,
+  "autoprefixer_browsers": [
+    "last 3 versions"
+  ],
+  "meta": {
+    "price": 17000,
+    "documentation_url": "http://support.pixelunion.net/category/150-chelsea",
+    "author_name": "Pixel Union",
+    "author_email": "support@pixelunion.net",
+    "author_support_url": "http://support.pixelunion.net/",
+    "composed_image": "chelsea-composed.png",
+    "features": [
+      "fully_responsive",
+      "mega_navigation",
+      "multi_tiered_sidebar_menu",
+      "masonry_design",
+      "frontpage_slideshow",
+      "quick_add_to_cart",
+      "customized_checkout",
+      "switchable_product_view",
+      "product_comparison_table",
+      "complex_search_filtering",
+      "customizable_product_selector",
+      "cart_suggested_products",
+      "free_customer_support",
+      "free_theme_upgrades",
+      "high_res_product_images",
+      "product_filtering",
+      "advanced_quick_view",
+      "product_showcase",
+      "persistent_cart",
+      "one_page_check_out",
+      "product_videos"
+    ]
+  },
+  "resources": {
+    "cart": true,
+    "shop_by_brand": {
+      "limit": 11
+    }
+  },
+  "settings": {
+    "primary-font": "Google_Playfair+Display_400,700",
+    "secondary-font": "Google_Karla_400,700",
+    "site-background-color": "#f8f4f4",
+    "heading-color": "#000000",
+    "navigation-color": "#000000",
+    "navigation-text-transform": "none",
+    "mobile-navigation-text": "#ffffff",
+    "mobile-navigation-background": "#000000",
+    "footer-background-color": "#575453",
+    "footer-text-color": "#ffffff",
+    "sign-up-background-color": "#e9e4e0",
+    "sign-up-text-color": "#3f3f3f",
+    "sign-up-button-color": "#3f3f3f",
+    "body-color": "#3f3f3f",
+    "accent-color": "#c7b299",
+    "border-color": "#eaeaea",
+    "input-color": "#5a5a5a",
+    "input-border-color": "#cccccc",
+    "secondary-button-color": "#c7b299",
+    "error-color": "#f00f00",
+    "banner-background-color": "#e9e4e0",
+    "banner-text-color": "#000000",
+    "carousel-text-color": "#ffffff",
+    "star-color": "#e2cd7b",
+    "star-empty-color": "#dfdcdc",
+    "promo-color": "#cae2aa",
+    "promo-text-color": "#445c23",
+    "default_image": "/assets/img/product-default.png",
+    "sitemap": true,
+    "shop-nav": true,
+    "product-quick-shop": true,
+    "brands-images": false,
+    "product-count": 12,
+    "products-per-row": 4,
+    "product_review_count": 6,
+    "theme-credits": true,
+    "show_footer_copyright": true,
+    "payment-visa": true,
+    "payment-mastercard": true,
+    "payment-american-express": true,
+    "payment-discover": true,
+    "payment-paypal": true,
+    "payment-apple-pay": true,
+    "product-show-dimensions": true,
+    "logo-position": "logo-center",
+    "menu-type": "basic-nav",
+    "show-category-description": false,
+    "show-category-image": false,
+    "apple_pay_style": "black",
+    "brands_per_page": 48,
+    "show_footer_brands": false,
+    "price_as_low_as": true,
+    "show-home-link": false,
+    "show-pages": true,
+    "show-categories": true,
+    "header-layout": "split-menu",
+    "_images": {
+      "logo": {
+        "width": 250,
+        "height": 100
+      },
+      "thumbnail": {
+        "width": 175,
+        "height": 175
+      },
+      "small": {
+        "width": 300,
+        "height": 300
+      },
+      "medium": {
+        "width": 600,
+        "height": 600
+      },
+      "large": {
+        "width": 1280,
+        "height": 1280
+      },
+      "gallery": {
+        "width": 600,
+        "height": 600
+      },
+      "thumb": {
+        "width": 175,
+        "height": 175
+      },
+      "account_product_thumbnail": {
+        "width": 175,
+        "height": 175
+      }
+    },
+    "optimizedCheckout-header-backgroundColor": "#f7f7f7",
+    "optimizedCheckout-show-backgroundImage": false,
+    "optimizedCheckout-backgroundImage": "",
+    "optimizedCheckout-backgroundImage-size": "1000x400",
+    "optimizedCheckout-show-logo": "none",
+    "optimizedCheckout-logo": "",
+    "optimizedCheckout-logo-size": "250x100",
+    "optimizedCheckout-logo-position": "left",
+    "optimizedCheckout-headingPrimary-color": "#2d2d2d",
+    "optimizedCheckout-headingPrimary-font": "Google_Montserrat_400",
+    "optimizedCheckout-headingSecondary-color": "#2d2d2d",
+    "optimizedCheckout-headingSecondary-font": "Google_Montserrat_400",
+    "optimizedCheckout-body-backgroundColor": "#ffffff",
+    "optimizedCheckout-contentPrimary-color": "#4f4f4f",
+    "optimizedCheckout-contentPrimary-font": "Google_Karla_400",
+    "optimizedCheckout-contentSecondary-color": "#989898",
+    "optimizedCheckout-contentSecondary-font": "Google_Karla_400",
+    "optimizedCheckout-buttonPrimary-font": "Google_Karla_400",
+    "optimizedCheckout-buttonPrimary-color": "#ffffff",
+    "optimizedCheckout-buttonPrimary-colorHover": "#ffffff",
+    "optimizedCheckout-buttonPrimary-backgroundColor": "#454545",
+    "optimizedCheckout-buttonPrimary-backgroundColorHover": "#666666",
+    "optimizedCheckout-buttonPrimary-borderColor": "#454545",
+    "optimizedCheckout-buttonPrimary-borderColorHover": "#666666",
+    "optimizedCheckout-buttonSecondary-font": "Google_Karla_400",
+    "optimizedCheckout-buttonSecondary-color": "#4f4f4f",
+    "optimizedCheckout-buttonSecondary-backgroundColor": "#ffffff",
+    "optimizedCheckout-buttonSecondary-borderColor": "#dfdfdf",
+    "optimizedCheckout-link-color": "#4496f6",
+    "optimizedCheckout-link-font": "Google_Karla_400",
+    "optimizedCheckout-discountBanner-backgroundColor": "#f5f5f5",
+    "optimizedCheckout-discountBanner-textColor": "#333333",
+    "optimizedCheckout-discountBanner-iconColor": "#333333",
+    "optimizedCheckout-orderSummary-backgroundColor": "#ffffff",
+    "optimizedCheckout-step-backgroundColor": "#4f4f4f",
+    "optimizedCheckout-step-textColor": "#ffffff",
+    "optimizedCheckout-formField-backgroundColor": "white",
+    "optimizedCheckout-formField-borderColor": "#989898"
+  },
+  "variations": [
+    {
+      "name": "Bold",
+      "id": "bold",
+      "meta": {
+        "desktop_screenshot": "chelsea-bold.png",
+        "mobile_screenshot": "chelsea-bold-mobile.png",
+        "description": "Chelsea helps you create the perfect online lookbook. Its large imagery and elegant typography let your products tell the story, while making your customers feel like they’ve walked into a high-end boutique. Whether you’re selling clothing, jewelry, or health and beauty products, Chelsea is the perfect home for your premium lifestyle brand.",
+        "demo_url": "http://chelsea-bold-demo.mybigcommerce.com/",
+        "optimized_for": [
+          "gifts_specialty",
+          "health_beauty",
+          "home_garden",
+          "multi_purpose",
+          "chrome_firefox_safari_ie_10",
+          "mobile_tablet_desktop",
+          "sales_discounts",
+          "mobile",
+          "clothing"
+        ],
+        "industries": [
+          "gifts_specialty"
+        ]
+      },
+      "settings": {
+        "primary-font": "Google_Playfair+Display_400,700",
+        "secondary-font": "Google_Karla_400,700",
+        "site-background-color": "#ffffff",
+        "heading-color": "#173f68",
+        "navigation-color": "#173f68",
+        "navigation-text-transform": "uppercase",
+        "mobile-navigation-text": "#ffffff",
+        "mobile-navigation-background": "#000000",
+        "footer-background-color": "#ffffff",
+        "footer-text-color": "#000000",
+        "sign-up-background-color": "#e9e4e0",
+        "sign-up-text-color": "#3f3f3f",
+        "sign-up-button-color": "#c7b299",
+        "body-color": "#3f3f3f",
+        "accent-color": "#173f68",
+        "border-color": "#eaeaea",
+        "input-color": "#5a5a5a",
+        "input-border-color": "#cccccc",
+        "secondary-button-color": "#c7b299",
+        "error-color": "#f00f00",
+        "banner-background-color": "#e8e0d5",
+        "banner-text-color": "#173f68",
+        "carousel-text-color": "#173f68",
+        "star-color": "#e2cd7b",
+        "star-empty-color": "#dfdcdc",
+        "promo-color": "#cae2aa",
+        "promo-text-color": "#445c23",
+        "default_image": "/assets/img/product-default.png",
+        "sitemap": false,
+        "shop-nav": true,
+        "product-quick-shop": true,
+        "brands-images": false,
+        "product-count": 12,
+        "products-per-row": 3,
+        "product_review_count": 6,
+        "theme-credits": false,
+        "show_footer_copyright": true,
+        "payment-visa": true,
+        "payment-mastercard": true,
+        "payment-american-express": true,
+        "payment-discover": false,
+        "payment-paypal": true,
+        "payment-apple-pay": true,
+        "product-show-dimensions": true,
+        "logo-position": "logo-center",
+        "menu-type": "basic-nav",
+        "show-category-description": false,
+        "show-category-image": false,
+        "apple_pay_style": "black",
+        "brands_per_page": 48,
+        "show_footer_brands": false,
+        "price_as_low_as": true,
+        "show-home-link": false,
+        "show-pages": true,
+        "show-categories": true,
+        "header-layout": "split-menu",
+        "_images": {
+          "logo": {
+            "width": 250,
+            "height": 100
+          },
+          "thumbnail": {
+            "width": 175,
+            "height": 175
+          },
+          "small": {
+            "width": 300,
+            "height": 300
+          },
+          "medium": {
+            "width": 600,
+            "height": 600
+          },
+          "large": {
+            "width": 1280,
+            "height": 1280
+          },
+          "gallery": {
+            "width": 600,
+            "height": 600
+          },
+          "thumb": {
+            "width": 175,
+            "height": 175
+          },
+          "account_product_thumbnail": {
+            "width": 175,
+            "height": 175
+          }
+        },
+        "optimizedCheckout-header-backgroundColor": "#f7f7f7",
+        "optimizedCheckout-show-backgroundImage": false,
+        "optimizedCheckout-backgroundImage": "",
+        "optimizedCheckout-backgroundImage-size": "1000x400",
+        "optimizedCheckout-show-logo": "none",
+        "optimizedCheckout-logo": "",
+        "optimizedCheckout-logo-size": "250x100",
+        "optimizedCheckout-logo-position": "left",
+        "optimizedCheckout-headingPrimary-color": "#2d2d2d",
+        "optimizedCheckout-headingPrimary-font": "Google_Montserrat_400",
+        "optimizedCheckout-headingSecondary-color": "#2d2d2d",
+        "optimizedCheckout-headingSecondary-font": "Google_Montserrat_400",
+        "optimizedCheckout-body-backgroundColor": "#ffffff",
+        "optimizedCheckout-contentPrimary-color": "#4f4f4f",
+        "optimizedCheckout-contentPrimary-font": "Google_Karla_400",
+        "optimizedCheckout-contentSecondary-color": "#989898",
+        "optimizedCheckout-contentSecondary-font": "Google_Karla_400",
+        "optimizedCheckout-buttonPrimary-font": "Google_Karla_400",
+        "optimizedCheckout-buttonPrimary-color": "#ffffff",
+        "optimizedCheckout-buttonPrimary-colorHover": "#ffffff",
+        "optimizedCheckout-buttonPrimary-backgroundColor": "#454545",
+        "optimizedCheckout-buttonPrimary-backgroundColorHover": "#666666",
+        "optimizedCheckout-buttonPrimary-borderColor": "#454545",
+        "optimizedCheckout-buttonPrimary-borderColorHover": "#666666",
+        "optimizedCheckout-buttonSecondary-font": "Google_Karla_400",
+        "optimizedCheckout-buttonSecondary-color": "#4f4f4f",
+        "optimizedCheckout-buttonSecondary-backgroundColor": "#ffffff",
+        "optimizedCheckout-buttonSecondary-borderColor": "#dfdfdf",
+        "optimizedCheckout-link-color": "#4496f6",
+        "optimizedCheckout-link-font": "Google_Karla_400",
+        "optimizedCheckout-discountBanner-backgroundColor": "#f5f5f5",
+        "optimizedCheckout-discountBanner-textColor": "#333333",
+        "optimizedCheckout-discountBanner-iconColor": "#333333",
+        "optimizedCheckout-orderSummary-backgroundColor": "#ffffff",
+        "optimizedCheckout-step-backgroundColor": "#4f4f4f",
+        "optimizedCheckout-step-textColor": "#ffffff",
+        "optimizedCheckout-formField-backgroundColor": "white",
+        "optimizedCheckout-formField-borderColor": "#989898"
+      }
+    },
+    {
+      "name": "Bright",
+      "id": "bright",
+      "meta": {
+        "desktop_screenshot": "chelsea-bright.png",
+        "mobile_screenshot": "chelsea-bright-mobile.png",
+        "description": "Chelsea helps you create the perfect online lookbook. Its large imagery and elegant typography let your products tell the story, while making your customers feel like they’ve walked into a high-end boutique. Whether you’re selling clothing, jewelry, or health and beauty products, Chelsea is the perfect home for your premium lifestyle brand.",
+        "demo_url": "http://chelsea-bright-demo.mybigcommerce.com/",
+        "optimized_for": [
+          "multi_purpose",
+          "chrome_firefox_safari_ie_10",
+          "mobile_tablet_desktop",
+          "sales_discounts",
+          "mobile",
+          "home_furnishings"
+        ],
+        "industries": [
+          "home_garden"
+        ]
+      },
+      "settings": {
+        "primary-font": "Google_Merriweather_400",
+        "secondary-font": "Google_Merriweather_400",
+        "site-background-color": "#f6f3f6",
+        "navigation-text-transform": "uppercase",
+        "accent-color": "#86658c",
+        "secondary-button-color": "#86658c",
+        "footer-background-color": "#f2ecf2",
+        "footer-text-color": "#585658",
+        "sign-up-background-color": "#86658c",
+        "sign-up-text-color": "#ffffff",
+        "sign-up-button-color": "#5e3d64",
+        "banner-background-color": "#86658c",
+        "banner-text-color": "#ffffff"
+      }
+    },
+    {
+      "name": "Warm",
+      "id": "warm",
+      "meta": {
+        "desktop_screenshot": "chelsea-warm.png",
+        "mobile_screenshot": "chelsea-warm-mobile.png",
+        "description": "Chelsea helps you create the perfect online lookbook. Its large imagery and elegant typography let your products tell the story, while making your customers feel like they've walked into a high-end boutique. Whether you're selling clothing, jewelry, or health and beauty products, Chelsea is the perfect home for your premium lifestyle brand.",
+        "demo_url": "http://chelsea-warm-demo.mybigcommerce.com/",
+        "optimized_for": [
+          "multi_purpose",
+          "chrome_firefox_safari_ie_10",
+          "mobile_tablet_desktop",
+          "sales_discounts",
+          "mobile",
+          "cosmetics"
+        ],
+        "industries": [
+          "health_beauty"
+        ]
+      },
+      "settings": {
+        "primary-font": "Google_Source+Sans+Pro_400",
+        "secondary-font": "Google_Source+Sans+Pro_400",
+        "site-background-color": "#fbf9f4",
+        "navigation-text-transform": "none",
+        "accent-color": "#c6af68",
+        "secondary-button-color": "#c6af68",
+        "footer-background-color": "#fbf9f4",
+        "footer-text-color": "#434241",
+        "sign-up-background-color": "#f1eada",
+        "sign-up-text-color": "#201f1d",
+        "sign-up-button-color": "#c9ad70",
+        "banner-background-color": "#f1eada",
+        "banner-text-color": "#201f1d"
+      }
+    },
+    {
+      "name": "Clean",
+      "id": "clean",
+      "meta": {
+        "desktop_screenshot": "chelsea-clean.png",
+        "mobile_screenshot": "chelsea-clean-mobile.png",
+        "description": "Chelsea helps you create the perfect online lookbook. Its large imagery and elegant typography let your products tell the story, while making your customers feel like they've walked into a high-end boutique. Whether you're selling clothing, jewelry, or health and beauty products, Chelsea is the perfect home for your premium lifestyle brand.",
+        "demo_url": "http://chelsea-clean-demo.mybigcommerce.com/",
+        "optimized_for": [
+          "multi_purpose",
+          "chrome_firefox_safari_ie_10",
+          "mobile_tablet_desktop",
+          "sales_discounts",
+          "mobile",
+          "clothing"
+        ],
+        "industries": [
+          "fashion_jewelry"
+        ]
+      },
+      "settings": {
+        "primary-font": "Google_Karla_400,700",
+        "secondary-font": "Google_Karla_400,700",
+        "site-background-color": "#ffffff",
+        "navigation-text-transform": "uppercase",
+        "accent-color": "#ed1c23",
+        "secondary-button-color": "#ed1c23",
+        "footer-background-color": "#fbfbfb",
+        "footer-text-color": "#000000",
+        "sign-up-background-color": "#ed1e22",
+        "sign-up-text-color": "#ffffff",
+        "sign-up-button-color": "#c31317",
+        "banner-background-color": "#ed1e22",
+        "banner-text-color": "#ffffff"
+      }
+    }
+  ]
+}

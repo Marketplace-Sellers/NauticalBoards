@@ -1,0 +1,9 @@
+<div class="branding">
+  {{#if settings.store_logo.image.data}}
+    <a class="logo" href="/">
+      <img class="header-logo-image" src="{{getImage settings.store_logo.image 'logo'}}" alt="{{settings.store_logo.image.alt}}">
+    </a>
+  {{else}}
+    <h1 class="text"><a href="/">{{settings.store_logo.title}}</a></h1>
+  {{/if}}
+</div>

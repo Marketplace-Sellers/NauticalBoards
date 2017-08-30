@@ -1,0 +1,95 @@
+
+<nav class="main-menu">
+  <div class="mobile-search">
+    {{> components/search-form}}
+  </div>
+  <ul class="nav-menu
+    {{#if theme_settings.show-pages '===' false}}
+      {{#if theme_settings.menu-type '!==' 'main-nav'}}
+        small-menu
+      {{/if}}
+    {{/if}}"
+  >
+
+    {{#if theme_settings.show-home-link}}
+      <li class="nav-menu-item">
+        <a href="{{urls.home}}">{{lang 'common.home_link'}}</a>
+      </li>
+    {{/if}}
+
+    {{#if theme_settings.show-categories}}
+      {{#if theme_settings.menu-type '===' 'basic-nav'}}
+        <li class="nav-menu-item has-dropdown has-shop-link">
+          <a href="#" data-shop-link>{{lang 'common.shop_all'}}</a>
+          <div class="nav-submenu">
+            <div class="nav-submenu-arrow"><div class="nav-submenu-arrow-inner"></div></div>
+            <span class="nav-overflow">
+              <ul>
+                {{#each categories}}
+                  <li class="nav-submenu-item {{#if children}}has-dropdown{{/if}}">
+                    {{> components/navigation-item has_children=children}}
+                  </li>
+                {{/each}}
+              </ul>
+            </span>
+          </div>
+          <i class="nav-arrow-icon"></i>
+        </li>
+      {{/if}}
+      {{#if theme_settings.menu-type '===' 'expanded-nav'}}
+        <li class="nav-menu-item has-dropdown has-shop-link">
+          <a href="#" data-shop-link>{{lang 'common.shop_all'}}</a>
+          <div class="nav-submenu">
+            <div class="nav-submenu-arrow">
+              <div class="nav-submenu-arrow-inner"></div>
+            </div>
+            <span class="nav-overflow">
+              <ul>
+                {{#each categories}}
+                  <li class="nav-submenu-item {{#if children}}has-dropdown{{/if}}">
+                    {{> components/navigation-item has_children=children}}
+                  </li>
+                {{/each}}
+              </ul>
+            </span>
+          </div>
+          <i class="nav-arrow-icon"></i>
+        </li>
+      {{/if}}
+      {{#if theme_settings.menu-type '===' 'main-nav'}}
+        {{#each categories}}
+          <li class="nav-menu-item {{#if children}}has-dropdown{{/if}}">
+            {{> components/navigation-item has_children=children}}
+            {{#if children}}
+              <i class="nav-arrow-icon"></i>
+            {{/if}}
+          </li>
+        {{/each}}
+      {{/if}}
+    {{/if}}
+
+    {{#if theme_settings.show-pages}}
+      {{#each pages}}
+        <li class="nav-menu-item {{#if children}}has-dropdown{{/if}}">
+          {{> components/navigation-item has_children=children}}
+          {{#if children}}
+            <i class="nav-arrow-icon"></i>
+          {{/if}}
+        </li>
+      {{/each}}
+    {{/if}}
+
+    <li class="nav-menu-item has-dropdown more">
+      <a href="#">{{lang 'common.more_pages'}}</a>
+      <ul class="overflow nav-submenu">
+        <div class="nav-submenu-arrow">
+          <div class="nav-submenu-arrow-inner"></div>
+        </div>
+      </ul>
+        <i class="nav-arrow-icon"></i>
+    </li>
+
+  </ul>
+  {{> components/account-links}}
+</nav>
+{{> components/search-form}}

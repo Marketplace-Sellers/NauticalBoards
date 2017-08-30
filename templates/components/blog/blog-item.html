@@ -1,0 +1,43 @@
+<article class="blog-item">
+
+  <a class="post-link" href="{{url}}">
+
+    <!-- Post header -->
+    <header class="post-header">
+      <h1 class="post-title">{{title}}</h1>
+      <div class="post-details">
+        <time class="post-timestamp">{{date_published}}</time>
+        {{#if author}}
+          <span class="post-meta post-author">{{lang 'blog.posted_by' author=author}}</span>
+        {{/if}}
+      </div>
+    </header>
+
+    <!-- Post thumbnail -->
+    {{#if thumbnail}}
+      <figure class="post-featured-image-container">
+        <img src="{{getImage thumbnail 'large'}}" alt="{{thumbnail.alt}}">
+      </figure>
+    {{/if}}
+
+  </a>
+
+  <!-- Post content -->
+  <div class="blog-content rte">
+    {{{summary}}}{{#if show_read_more}}...{{/if}}
+  </div>
+
+  <footer class="post-footer">
+    {{#if show_read_more}}
+      <a class="read-more" href="{{url}}"><span>{{lang 'blog.read_more'}}</span></a>
+    {{/if}}
+    {{#if tags.length}}
+      <div class="post-tags">
+        {{#each tags}}
+          <a href="{{url}}" title="{{lang 'blog.tag_permalink' tag=name}}">{{name}}</a>{{#unless @last}},&nbsp;{{/unless}}
+        {{/each}}
+      </div>
+    {{/if}}
+  </footer>
+
+</article>

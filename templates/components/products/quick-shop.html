@@ -1,0 +1,26 @@
+<a href="#" class="modal-close">&times;</a>
+
+<div class="modal-body" data-quick-shop-product>
+
+  <div class="product-images">
+    {{> components/products/images
+      images=product.images
+      default_image=theme_settings.default_image
+    }}
+    {{> components/products/product-thumbnails
+      product.images
+    }}
+  </div>
+
+  <div class="product-details-wrapper">
+    <div class="product-details" data-product-title="{{product.title}}">
+      {{> components/products/product-details
+        quick_shop=true
+      }}
+      <a class="quick-shop-view-product" href="{{product.url}}">
+        {{lang 'product.view_product'}}
+      </a>
+    </div>
+  </div>
+
+</div>

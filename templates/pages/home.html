@@ -1,0 +1,38 @@
+---
+carousel: true
+products:
+  featured:
+    limit: 4
+---
+
+{{#partial "page"}}
+
+  {{> components/common/shipping-messages}}
+
+  {{#if carousel}}
+    {{inject 'carouselDelay' carousel.swap_frequency}}
+    {{> components/carousel}}
+  {{/if}}
+  {{{snippet 'home_content'}}}
+  
+  <div class="tagline">
+      <h2>HANDCRAFTED NAUTICAL CUTTING BOARDS AND SERVING TRAYS FOR THE YACHTSMAN</h2>
+  </div>
+  <div class="tagline">
+      <p>“Quality” has a whole now meaning. Handcarved from American maple and sapele, Nautical Boards are bold, beautiful, and made for the seafaring lad or lass with a knack for entertaining and storytelling.</p><p>Customize with laser engravings of boat names, family crests, or anything your heart can dream up. Nautical Boards are made to be talked about and cherished with the closest of family and friends.</p>
+</span>
+  </div>
+
+  <div class="home">
+    {{> components/products/products-featured products=products.featured quick_shop=../theme_settings.product-quick-shop}}
+  </div>
+  
+  <!-- joe new product test
+  <div class="home">
+    {{> components/products/products-featured products=products.featured quick_shop=../theme_settings.product-quick-shop}}
+  </div>
+   end joe new product test -->
+
+{{/partial}}
+
+{{> layout/base}}

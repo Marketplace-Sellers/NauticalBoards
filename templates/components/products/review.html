@@ -1,0 +1,19 @@
+{{#if @index "<" review_count}}
+  <article class="review default">
+{{/if}}
+{{#if @index ">=" review_count}}
+  <article class="review supplementary">
+{{/if}}
+  <header class="review-header">
+    <h1 class="review-title">{{title}}</h1>
+    <div class="review-rating">
+      {{> components/products/ratings rating=rating}}
+    </div>
+    {{#if name}}
+      <span class="review-meta">{{lang 'products.reviews.post_on_by' name=name date=date}}</span>
+    {{else}}
+      <time class="review-date">{{date}}</time>
+    {{/if}}
+  </header>
+  <section class="review-comment">{{text}}</section>
+</article>

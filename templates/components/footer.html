@@ -1,0 +1,129 @@
+<footer class="main-footer {{#if theme_settings.show_footer_brands}}footer-has-brands{{/if}}">
+  {{#if settings.show_newsletter_box}}
+    <section class="site-subscribe">
+      {{> components/common/newsletter-subscribe}}
+    </section>
+  {{/if}}
+
+  <div class="site-footer-wrap">
+
+    <div class="site-footer">
+
+      <section class="site-footer-item footer-branding">
+        {{#if settings.store_logo.image.data}}
+          <a class="logo" href="/">
+            <img class="header-logo-image" src="{{getImage settings.store_logo.image 'logo'}}" alt="{{settings.store_logo.image.alt}}">
+          </a>
+        {{else}}
+          <h1 class="text"><a href="/">{{settings.store_logo.title}}</a></h1>
+        {{/if}}
+      </section>
+
+      <nav class="site-footer-item site-page-nav">
+        <ul>
+          {{#each pages}}
+            <li class="site-footer-nav-item"><a href="{{url}}">{{name}}</a></li>
+          {{/each}}
+          {{#all settings.gift_certificates_enabled urls.gift_certificate.purchase}}
+            <li class="site-footer-nav-item"><a href="{{urls.gift_certificate.purchase}}">{{lang 'footer.purchase_gift_certificates'}}</a></li>
+          {{/all}}
+          {{#if theme_settings.sitemap}}
+            {{#if urls.sitemap}}
+              <li class="site-footer-nav-item"><a href="{{urls.sitemap}}">{{lang 'common.sitemap'}}</a></li>
+            {{/if}}
+          {{/if}}
+          <li class="site-footer-nav-item"><a href="/wholesale/">Wholesale</a></li>
+          <li class="site-footer-nav-item"><a href="/corporate-gifting/">Corporate Gifting</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer-item site-category-nav">
+        <ul>
+          {{#each categories}}
+            <li class="site-footer-nav-item"><a href="{{url}}">{{name}}</a></li>
+          {{/each}}
+          <li class="site-footer-nav-item"><a href="/serving-trays/">Serving Trays</a></li>
+          <li class="site-footer-nav-item"><a href="/carving-boards/">Carving Boards</a></li>
+          <li class="site-footer-nav-item"><a href="/cheese-boards/">Cheese Boards</a></li>
+        </ul>
+      </nav>
+
+      {{#if theme_settings.show_footer_brands}}
+        <nav class="site-footer-item site-brand-nav">
+          <ul>
+            {{#each shop_by_brand}}
+              <li class="site-footer-nav-item"><a href="{{url}}">{{name}}</a></li>
+            {{/each}}
+            {{#if 10 '<' shop_by_brand.length}}
+              <li class="footer-menu-catchall">
+                <a href="{{{urls.brands}}}">{{lang 'footer.all_brands'}} {{heading}}</a>
+              </li>
+            {{/if}}
+          </ul>
+        </nav>
+      {{/if}}
+
+      <nav class="site-footer-item social-icon-nav">
+        <span class="connect-label">{{lang 'footer.connect'}}</span>
+        <ul class="social-icon-list">
+          {{#each social_media}}
+            <li class="social-link {{#if display_name '===' 'google+'}}google-plus{{else}}{{display_name}}{{/if}}">
+              <a href="{{url}}" class="{{display_name}}" target="_blank"></a>
+            </li>
+          {{/each}}
+        </ul>
+      </nav>
+
+      <section class="site-footer-item site-info">
+        {{#if theme_settings.payment-visa}}
+          <div class="payment-type payment-type-visa">
+            {{> components/common/icons/payment/visa}}
+          </div>
+        {{/if}}
+        {{#if theme_settings.payment-mastercard}}
+          <div class="payment-type payment-type-mastercard">
+            {{> components/common/icons/payment/mastercard}}
+          </div>
+        {{/if}}
+        {{#if theme_settings.payment-american-express}}
+          <div class="payment-type payment-type-american-express">
+            {{> components/common/icons/payment/american-express}}
+          </div>
+        {{/if}}
+        {{#if theme_settings.payment-discover}}
+          <div class="payment-type payment-type-discover">
+            {{> components/common/icons/payment/discover}}
+          </div>
+        {{/if}}
+        {{#if theme_settings.payment-paypal}}
+          <div class="payment-type payment-type-paypal">
+            {{> components/common/icons/payment/paypal}}
+          </div>
+        {{/if}}
+        {{#if theme_settings.payment-apple-pay}}
+          <div class="payment-type payment-type-apple-pay">
+            {{> components/common/icons/payment/apple-pay}}
+          </div>
+        {{/if}}
+        {{#or theme_settings.theme-credits theme_settings.show_footer_copyright}}
+          <p class="footer-trademark">
+            {{#if theme_settings.show_footer_copyright}}
+              <span class="footer-copyright">
+                &copy; <script>document.write(new Date().getFullYear())</script> {{{ settings.store_name }}}
+              </span>
+            <!-- {{/if}}
+            {{#if theme_settings.theme-credits}}
+              {{{ lang 'footer.theme_attribution'
+                theme_name='Chelsea'
+                developed='<a href="http://pixelunion.net" target="_blank">Pixel Union</a>'
+                powered_by='<a href="https://www.bigcommerce.com/" target="_blank" rel="nofollow">BigCommerce</a>'
+              }}}
+            {{/if}} -->
+          </p>
+        {{/or}}
+      </section>
+
+    </div>
+
+  </div>
+</footer>

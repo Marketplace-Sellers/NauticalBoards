@@ -1,0 +1,13 @@
+<form class="form subscription-form" action="{{urls.subscribe.action}}" method="post">
+  <div class="form-field form-inline subscription-form-email">
+    <label class="form-label" for="newsletter-subscribe">{{lang 'newsletter.subscribe'}}</label>
+    <input class="form-input" id="newsletter-subscribe" type="email" name="nl_email" value="{{customer.email}}" placeholder="{{lang 'newsletter.email_placeholder'}}">
+
+    {{! TODO: Make sure the name/check fields are needed}}
+    <input type="hidden" name="action" value="subscribe">
+    <input type="hidden" name="nl_first_name" value="bc">
+    <input type="hidden" name="check" value="1">
+
+    <input class="button subscription-form-submit" type="submit" value="{{lang 'newsletter.subscribe_submit'}}">
+  </div>
+</form>

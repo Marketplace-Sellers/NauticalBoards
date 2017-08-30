@@ -1,0 +1,7 @@
+<div class="search-form-wrapper {{#if settings.account_creation_enabled}}account-links-enabled{{/if}}">
+  {{{snippet "forms_search"}}}
+  <form class="search-form" action="{{urls.search}}">
+    <input class="search-input" name="search_query" placeholder="{{lang 'header.search'}}">
+    <span class="search-close">&times;</span>
+  </form>
+</div>

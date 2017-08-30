@@ -1,0 +1,28 @@
+<div class="faceted-search" data-faceted-search data-search-query="{{forms.search.query}}">
+  <h2 class="facet-heading">{{lang 'search.faceted.selected.title'}}</h2>
+
+  {{#each product_results.facets}}
+    {{#if visible}}
+      <div class="facet-filter" data-facet-filter>
+
+        <h3 class="facet-section-heading">
+          {{title}}
+
+          {{#if remove_url}}
+            <a class="facet-clear" href="{{remove_url}}" data-faceted-search-facet data-facet-remove>{{lang 'search.faceted.clear'}}</a>
+          {{/if}}
+
+          {{#unless selected }}
+            {{#if start_collapsed}}
+              <span class="facet-toggle is-open" data-facet-toggle>&#43;</span>
+            {{else}}
+              <span class="facet-toggle" data-facet-toggle>&ndash;</span>
+            {{/if}}
+          {{/unless}}
+        </h3>
+
+        {{{dynamicComponent 'components/faceted-search/facets'}}}
+      </div>
+    {{/if}}
+  {{/each}}
+</div>

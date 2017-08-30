@@ -1,0 +1,29 @@
+
+<form class="form">
+  <div class="form-field form-field-options form-field-radio">
+    <div class="form-field-control">
+      {{#if quotes.shipping_methods}}
+        {{#each quotes.shipping_methods}}
+          <label class="form-label" for="shipping-quote-{{id}}">
+            <input id="shipping-quote-{{id}}" class="form-input form-radio" type="radio" name="shipping_method" value="{{id}}" data-shipping-quote>
+            <span class="form-label-text">{{provider_name}} {{cost.formatted}}</span>
+          </label>
+        {{/each}}
+      {{/if}}
+      {{#if quotes.ups_shipping_methods}}
+        {{#each quotes.ups_shipping_methods}}
+            <label class="form-label" for="shipping-quote-{{id}}">
+              <input id="shipping-quote-{{id}}" class="form-input form-radio" type="radio" name="shipping_method" value="{{id}}" data-shipping-quote>
+              <span class="form-label-text">
+                {{#if logo_path}}<img class="ups-shipping-badge" src="{{logo_path}}" alt=""/>{{/if}}
+                {{description}} {{cost.formatted}}
+              </span>
+            </label>
+        {{/each}}
+      {{/if}}
+    </div>
+  </div>
+  <div class="form-actions">
+    <input class="button" type="submit" value="{{lang 'cart.shipping_calculator.select'}}">
+  </div>
+</form>

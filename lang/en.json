@@ -1,0 +1,1016 @@
+{
+  "header": {
+    "logged_in_as": "Logged in as {name}",
+    "log_out": "Log out",
+    "log_in": "Log in",
+    "sign_up": "Sign up",
+    "view_cart": "View cart",
+    "search": "Search",
+    "total": "Total"
+  },
+  "footer": {
+    "connect": "Connect with us",
+    "theme_attribution": "{theme_name} theme by {developed}, powered by {powered_by}.",
+    "purchase_gift_certificates": "Gift Certificates",
+    "all_brands": "All Brands"
+  },
+  "home": {
+    "heading": "Home",
+    "new_products": "New Products",
+    "featured_products": "Popular Products",
+    "price_from": "from"
+  },
+  "blog": {
+    "recent_posts": "Recent Posts",
+    "label": "Blog",
+    "read_more": "Continue reading",
+    "posted_by": "By {author}",
+    "share_this": "Share this"
+  },
+  "cart_preview": {
+    "items": "{NUM, plural, =0{(0 items)} one {(# item)} other {(# items)}}",
+    "label": "Cart",
+    "checkout": {
+      "empty_cart": "Your cart is empty",
+      "title": "Check out",
+      "button": "Check out"
+    }
+  },
+  "cart": {
+    "title": "Confirm your order",
+    "quantity": "Qty",
+    "update": "Update",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "checkout": "Checkout",
+    "empty": "Your cart is empty",
+    "empty_message": "Continue Shopping.",
+    "discount": "Discount",
+    "coupon_codes": {
+      "label": "Coupon: {code}",
+      "remove": "Remove",
+      "coupon_code": "Coupon Code",
+      "add_code": "Add Code",
+      "change_code": "Change",
+      "enter_code": "Enter Your Coupon Code",
+      "submit": "Apply",
+      "error": "Please enter your coupon code."
+    },
+    "gift_certificates": {
+      "add_code": "Add Certificate",
+      "gift_certificate": "Gift Certificate",
+      "label": "Gift Certificate: {code}",
+      "enter_code": "Enter your certificate code",
+      "error": "Please enter your valid certificate code.",
+      "remove": "Remove",
+      "submit": "Apply"
+    },
+    "shipping_calculator": {
+      "title": "Shipping",
+      "add_info": "Estimate Shipping",
+      "select_a_country": "Choose a Country",
+      "select_a_state": "Choose a State/Province",
+      "estimate_shipping": "Estimate Shipping",
+      "zip_postal_code": "Zip/Postcode",
+      "select": "Select",
+      "error": "Error"
+    },
+    "gift_wrapping": {
+      "title": "Wrapping: ",
+      "heading": "Gift Wrapping",
+      "close": "Close",
+      "add": "Add",
+      "change": "Change",
+      "change_or": "or",
+      "remove": "Remove",
+      "gift_message": "Gift Message",
+      "choose_how": "Please choose how you'd like to have this item gift wrapped.",
+      "preview": "(Preview)",
+      "remove_confirm": "Are you sure you want to remove the gift wrap option from this item?",
+      "option_same": "I'd like to wrap each of these using the same wrapping option",
+      "option_different": "I'd like to gift wrap each item separately",
+      "item_single": "Wrap: {name}",
+      "item_multiple": "Item {index}: {name}",
+      "choose_type": "Select wrapping option"
+    }
+  },
+  "rss": {
+    "heading": "RSS Syndication",
+    "intro": "RSS feeds are used for syndicating regularly changing content on a web site, including this one. You can open an RSS feed using an RSS reader and use it to see if there is any new content on this site or you can set up a server-side script to parse the feed and display it on your web site.",
+    "blog": {
+      "heading": "Recent Blog Posts",
+      "intro": "The recent post feed contains the latest blog posts published on {store}.",
+      "rss": "Latest Blog Posts (RSS)",
+      "rss_atom": "Latest Blog Posts (Atom)"
+    },
+    "products": {
+      "new": {
+        "heading": "New Products",
+        "intro": "The latest products feed contains the latest products added to {store}.",
+        "rss": "New Products (RSS)",
+        "rss_atom": "New Products (Atom)"
+      },
+      "popular": {
+        "heading": "Popular Products",
+        "intro": "The popular products feed contains the most popular products on {store} as rated by users.",
+        "rss": "Popular Products (RSS)",
+        "rss_atom": "Popular Products (Atom)"
+      },
+      "featured": {
+        "heading": "Featured Products",
+        "intro": "The featured products feed contains the latest featured products on {store}.",
+        "rss": "Featured Products (RSS)",
+        "rss_atom": "Featured Products (Atom)"
+      }
+    },
+    "search": {
+      "heading": "Product Searches",
+      "intro1": "Product search feeds allow you to save your custom product searches as syndication feed that will always update when there are new results.",
+      "intro2": "To create a product search feed, perform a standard search on {store} and at the bottom of the page click on one of the syndication options."
+    }
+  },
+  "compare": {
+    "header": "Comparing",
+    "num_of_items": "{products} items",
+    "add_to_cart": "Add to Cart",
+    "stop_comparing": "Remove",
+    "description": "Description",
+    "rating": "Rating",
+    "no_reviews": "No Reviews",
+    "availability": "Availability",
+    "not_avail": "Not Available"
+  },
+  "search": {
+    "search_results_start": "Search Results for ",
+    "search_results_end": " Returned <strong>{total}</strong> {total, plural, one{Product} other{Products}}",
+    "faceted": {
+      "selected": {
+        "title": "Refine by",
+        "no_filters": "No filters applied",
+        "clear_all": "Clear all filters"
+      },
+      "range": {
+        "update": "Update",
+        "min_placeholder": "Min",
+        "max_placeholder": "Max"
+      },
+      "rating": {
+        "and_up": "& up"
+      },
+      "clear": "Reset",
+      "more": "More",
+      "show_more": "Show more",
+      "show_less": "Show less",
+      "show_filters": "Show filters",
+      "hide_filters": "Hide filters",
+      "browse_by": "Browse by"
+    }
+  },
+  "contact": {
+    "full_name": "Full Name",
+    "full_name_placeholder": "Full Name",
+    "phone": "Phone Number",
+    "phone_placeholder": "Phone Number",
+    "email": "Email Address",
+    "email_placeholder": "Email Address",
+    "order": "Order Number",
+    "order_placeholder": "Order Number",
+    "company": "Company Name",
+    "company_placeholder": "Company Name",
+    "rma": "RMA Number",
+    "rma_placeholder": "RMA Number",
+    "captcha": "Are you human?",
+    "captcha_desc": "Please copy the characters from the image into the text field below. Doing this helps us prevent automated submissions.",
+    "question": "Comments/Questions",
+    "question_placeholder": "Enter your comments here",
+    "submit": "Submit Form",
+    "successful": "We've received your feedback and will respond shortly if required. <a href=\"{shopPath}\">Continue</a>."
+  },
+  "errors": {
+    "forbidden": {
+      "title": "403 Error — Forbidden",
+      "message": "Uh oh, you're not allowed to be here. Nothing to see, please move along."
+    },
+    "page_not_found": {
+      "title": "404 Error - Page not found",
+      "message": "Uh oh, looks like the page you are looking for has moved or no longer exists."
+    },
+    "server_error": {
+      "title": "500 Error - Internal error",
+      "message": "Uh oh, looks like something went wrong."
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "message": "Sorry, something went wrong when attempting to build this page. Please try again later."
+    }
+  },
+  "common": {
+    "account": "Account",
+    "my_account": "My Account",
+    "log_in": "Log In",
+    "log_out": "Log Out",
+    "shop_all": "Shop",
+    "more_pages": "More",
+    "email": "Email",
+    "gift_cards": "Gift Cards",
+    "powered_by": "Powered by {bigcommerce}.",
+    "print": "Print",
+    "required": "(required)",
+    "search": "Search",
+    "share": "Share",
+    "sitemap": "Sitemap",
+    "show_all": "Show All",
+    "theme_by": "{theme} theme by {pxu}.",
+    "wishlist": "Wishlist",
+    "currency_converter": "Currency Converter",
+    "form_submit": "Submit",
+    "prices_are_in": "Prices are in {CODE}",
+    "home_link": "Home",
+    "sorter": {
+      "sort_by": "Sort By",
+      "featured": "Featured Items",
+      "top_sellers": "Best Selling",
+      "newest": "Newest Items",
+      "alpha_asc": "A to Z",
+      "alpha_desc": "Z to A",
+      "reviews": "By Review",
+      "price_asc": "Price: Ascending",
+      "price_desc": "Price: Descending"
+    }
+  },
+  "newsletter": {
+    "subscribe": "Sign up for our newsletter",
+    "subscribe_submit": "Join",
+    "email_placeholder": "Enter your email address",
+    "subscribed_heading": "Thanks for subscribing!",
+    "subscribed_heading_error": "Oops...",
+    "subscribed_message": "Thank you for joining our mailing list. You'll be sent the next issue of our newsletter shortly",
+    "unsubscribed_heading": "Unsubscribed!",
+    "unsubscribed_message": "You will no longer receive marketing emails from <b>{store_name}</b>"
+  },
+  "category": {
+    "label": "Categories"
+  },
+  "brand": {
+    "label": "Brands",
+    "view_brands": "View all brands"
+  },
+  "page": {
+    "label": "Quick Links"
+  },
+  "pagination": {
+    "next": "Next",
+    "previous": "Previous",
+    "no_pagination": "Page 1 of 1"
+  },
+  "product": {
+    "excluding_tax": "(excl. tax)",
+    "including_tax": "(incl. tax)",
+    "select_an_option": "Please Choose An Option",
+    "pre_order": "Pre-Order",
+    "add_to_cart": "Add to Cart",
+    "add_to_wishlist": "Add to Wishlist",
+    "quantity": "Quantity",
+    "related_products": "Related products",
+    "success": "*product* has been successfully added to your *cart_link*. Feel free to *continue_link* or *checkout_link*.",
+    "error_message_stock": "Unfortunately, we do not have *quantity* in stock.",
+    "error_message_general": "We were unable to add this product to your cart. Please try again later. Contact us if you continue to have issues.",
+    "cart_link": "cart",
+    "home_link": "continue shopping",
+    "checkout_link": "check out",
+    "sold_out": "Sold Out",
+    "pick_one": "Pick one",
+    "you_save": "(You save {amount})",
+    "quick_shop": "Quickview",
+    "view_product": "View Product",
+    "compare": "Compare",
+    "sale": "Sale",
+    "compare_selected": "Compare Selected",
+    "comparing": "Comparing",
+    "sku": "SKU:",
+    "weight": "Weight:",
+    "width": "Width:",
+    "width_value": "{width} {uom}",
+    "height": "Height:",
+    "height_value": "{height} {uom}",
+    "depth": "Depth:",
+    "depth_value": "{depth} {uom}",
+    "stock_level": "Stock:",
+    "condition": "Condition:",
+    "availability": "Availability:",
+    "gift_wrapping": "Gift Wrapping:",
+    "gift_wrapping_available": "Options Available",
+    "warranty": "Warranty:",
+    "min_purchase": "Minimum purchase:",
+    "max_purchase": "Maximum purchase:",
+    "shipping": "Shipping Cost:",
+    "shipping_fixed": "{amount} (Fixed Shipping Cost)",
+    "shipping_free": "Free Shipping",
+    "shipping_calculated": "Calculated at Checkout",
+    "quantity_alert_less_than_error": "Quantity value {value} cannot be less than {min}",
+    "quantity_alert_more_than_error": "Quantity value {value} cannot be more than {max}",
+    "as_low_as_price_message": "As low as",
+    "bulk_pricing": {
+      "title": "Bulk Discounts:",
+      "see_pricing": "See Pricing",
+      "instructions": "Below are the available bulk discount rates for each individual item when you purchase a certain amount",
+      "range": "Buy {min} {max, plural, =0{or above} other {- #}}",
+      "percent": "and get {discount} off",
+      "price": "and get {discount} off",
+      "fixed": "and pay only {discount} each"
+    },
+    "reviews": {
+      "customer_reviews": "Customer Reviews",
+      "write_review": "Write a Review",
+      "no_reviews": "No reviews.",
+      "leave_review": "Leave a Review",
+      "stars_count": "{rating, plural, one {# star} other {# stars}}",
+      "view_all": "View all {count} reviews",
+      "view_less": "View Less",
+      "form": {
+        "select_a_rating": "Select a Rating",
+        "name": "Name",
+        "subject": "Subject",
+        "email": "Email Address",
+        "comments": "Comments",
+        "submit": "Submit Review",
+        "cancel": "Cancel"
+      }
+    },
+    "none": "None"
+  },
+  "products": {
+    "tabs": {
+      "details": "Details",
+      "reviews": "User Reviews",
+      "videos": "Videos"
+    },
+    "reviews": {
+      "captcha_heading": "Security Question",
+      "hide": "Hide Reviews",
+      "new": "Write a Review",
+      "show": "Show Reviews",
+      "header": "{total, plural, =0{0 Reviews} one {# Review} other {# Reviews}}",
+      "rating": {
+        "1": "1 star (worst)",
+        "2": "2 stars",
+        "3": "3 stars (average)",
+        "4": "4 stars",
+        "5": "5 stars (best)"
+      },
+      "link_to_review": "({total, plural, =0{No reviews yet} one {# review} other {# reviews}})",
+      "post_on_by": "Posted by { name } on { date }",
+      "rating_label": "Rating",
+      "select_rating": "Select Rating",
+      "anonymous_poster": "Unknown",
+      "write_a_review": "Write a Review",
+      "form_write": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Review Subject",
+        "comments": "Comments",
+        "submit_value": "Submit Review"
+      }
+    }
+  },
+  "forms": {
+    "required": "Required",
+    "address": {
+      "add": {
+        "heading": "Add New Address",
+        "description": "Use the form below to change any/all details of your shipping address. Click the 'Save Address' button when you are done."
+      },
+      "edit": {
+        "heading": "Update Address"
+      },
+      "submit_value": "Save Address"
+    },
+    "swatches_none_selected": "None Selected",
+    "date": {
+      "day": "Day",
+      "month": "Month",
+      "year": "Year",
+      "bounds": "Must be between {start_date} and {end_date}"
+    },
+    "file": {
+      "upload": "Upload",
+      "types": "Allowed file types: {file_types}.",
+      "size": "Maximum file size: {bytes} KB."
+    }
+  },
+  "account": {
+    "common": {
+      "yes": "Yes",
+      "no": "No",
+      "edit": "Edit",
+      "delete": "Delete",
+      "share": "Share",
+      "required": "Required",
+      "cancel": "Cancel"
+    },
+    "menu": {
+      "orders": "Orders",
+      "returns": "Returns",
+      "addresses": "Addresses",
+      "wishlists": "Wishlists",
+      "recently_viewed": "Recently Viewed",
+      "settings": "Account Settings",
+      "messages": "Messages"
+    },
+    "orders": {
+      "heading": "Orders",
+      "return_items": "Return Items",
+      "summary": "Summary",
+      "empty": "You haven't placed any orders.",
+      "details": {
+        "heading": "Order #{number}",
+        "summary": "Summary",
+        "order_contents": "Order Contents",
+        "ship_to": "Ship To",
+        "bill_to": "Bill To",
+        "ship_bill_to": "Ship and Bill To",
+        "payment_details": "Payment Info",
+        "payment_method": "Payment Method",
+        "payment_method_card": "{payment_method} ending in {digits}",
+        "contact_us": "Contact Us",
+        "comments": "Order Instructions/Comments",
+        "contact_text": "If you have any questions or concerns about your order donâ€™t hesitate to contact us!",
+        "download_items": "Download Items",
+        "store_credit": "Store credit",
+        "print_invoice": "Print Invoice",
+        "reorder": "Reorder",
+        "refunded_quantity": "{qty} refunded",
+        "gift_wrapping": "Gift wrapping",
+        "shipments": {
+          "title": "Shipments",
+          "date": "Date Shipped",
+          "method": "Shipping Method",
+          "link": "Tracking Link"
+        }
+      },
+      "return": {
+        "already_returned": "This order contains no products that can be returned. Have you already returned all of the items within this order?",
+        "back_button": "Go back",
+        "order_item": "Item",
+        "item_price": "Price",
+        "quantity": "Qty To Return",
+        "why": "Why are you returning these items?",
+        "reason": "Return Reason",
+        "action": "Return Action",
+        "comments": "Comments",
+        "return_details": "Details",
+        "request_return": "Submit Return Request"
+      },
+      "downloads": {
+        "heading": "Order #{number} Downloads",
+        "download_files_below": "Below you can download the files for",
+        "expired_content": "This file can not be downloaded because it has already expired."
+      },
+      "list": {
+        "order_item_name": "Item",
+        "order_number": "Order #",
+        "order_total": "Total",
+        "order_date": "Placed",
+        "order_update": "Updated",
+        "order_status": "Status",
+        "order_comment": "Comments",
+        "quantity": "Quantity",
+        "price": "Price",
+        "download": "Files",
+        "download_items": "Download Items",
+        "show_details": "Show Details",
+        "hide_details": "Hide Details"
+      },
+      "invoice": {
+        "order_details": "{store_name} Order #{order_id}",
+        "order_number": "Order ID: #{order_id}",
+        "order_date": "Order Date: {order_date}",
+        "order_contains": "Order Contains:"
+      }
+    },
+    "addresses": {
+      "heading": "Addresses",
+      "add_heading": "Add New Address",
+      "phone": "Phone: {phone_number}",
+      "new_address": "New Address",
+      "no_addresses": "You currently have no addresses added to your profile",
+      "submit": "Save Address"
+    },
+    "wishlists": {
+      "heading": "Wishlists",
+      "tag_line": "Fill in the form below to create a wishlist. Click the \"Save\" button when you're done.",
+      "new": "New Wishlist",
+      "num_items": "Items",
+      "wishlist_name": "Wishlist Name",
+      "make_public": "Make wishlist public",
+      "public": "Public",
+      "delete_all": "Delete All",
+      "edit": "Edit Wishlist",
+      "view_heading": "Wishlist: {name}",
+      "share_intro": "Share this wishlist with friends",
+      "wishlist_content": "Wishlist Contents",
+      "create": "Create Wishlist",
+      "save": "Save Wishlist",
+      "empty": "You have no wishlists."
+    },
+    "recent_items": {
+      "heading": "Recently Viewed",
+      "empty": "You haven't viewed any items recently."
+    },
+    "returns": {
+      "heading": "Returns",
+      "new_return": "New Return",
+      "from_order": "Return Items from Order #{id}",
+      "date_requested": "Return Requested",
+      "successful_heading": "Return Request Submitted",
+      "successful": "Your return was submitted successfully. We'll respond as soon as we can.",
+      "return": "Return to Orders",
+      "last_update": "Last Update",
+      "reason": "Reason for Return",
+      "action": "Return Action",
+      "comments": "Your Comments",
+      "empty": "You haven't made any returns.",
+      "list": {
+        "return_number": "Return #",
+        "product_details": "Returning {num_products}",
+        "return_item_name": "Item",
+        "return_quantity": "Quantity",
+        "return_date": "Requested",
+        "return_action": "Action",
+        "return_status": "Status",
+        "show_details": "Show Details",
+        "hide_details": "Hide Details"
+      },
+      "status": {
+        "pending": "Pending",
+        "received": "Received",
+        "authorized": "Authorized",
+        "repaired": "Repaired",
+        "refunded": "Refunded",
+        "rejected": "Rejected",
+        "cancelled": "Cancelled"
+      }
+    },
+    "settings": {
+      "heading": "Account Settings",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email Address",
+      "company": "Company",
+      "phone": "Phone Number",
+      "old_password": "Old Password",
+      "new_password": "New Password",
+      "confirm_password": "Confirm Password",
+      "update_details": "Update Details"
+    },
+    "messages": {
+      "heading": "Messages",
+      "send_message": "Send a Message",
+      "no_messages": "You have no messages at this time."
+    },
+    "inbox": {
+      "order": "Order",
+      "order_display": "Order #{id} / {date} / {total}",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "products": {
+      "max_filesize": "Maximum file size is",
+      "filetypes": "file types are"
+    },
+    "auth": {
+      "forms": {
+        "email_address": "Email Address",
+        "required": "Required",
+        "state_error": "There was a problem retrieving states/provinces"
+      },
+      "login": {
+        "title": "Account",
+        "log_in": "Log in",
+        "password": "Password",
+        "submit": "Submit",
+        "forgot_password": "Forgot Password",
+        "new_customer": {
+          "title": "New Customer",
+          "intro": "Create an account with us and you'll be able to:",
+          "fact1": "Check out faster",
+          "fact2": "Save multiple shipping addresses",
+          "fact3": "Access your order history",
+          "fact4": "Track new orders",
+          "fact5": "Save items to your wish list",
+          "create_account": "Create Account"
+        }
+      },
+      "create_account": {
+        "title": "Create Account",
+        "submit": "Create Account",
+        "captcha": "Captcha"
+      },
+      "account_created": {
+        "title": "Account Created",
+        "message": "Your {store_name} account was created with the email address: {email}",
+        "continue": "Continue"
+      },
+      "forgot_password": {
+        "title": "Forgot Password",
+        "message": "Forget your password?",
+        "submit": "Reset Password",
+        "success_message": "Great! We've sent you an email with instructions on how to reset your password."
+      },
+      "new_password": {
+        "title": "New Password"
+      }
+    }
+  },
+  "core": {
+    "pagination": {
+      "page": "Page",
+      "of": "of",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "product": {
+      "compare": "Compare",
+      "sale": "On Sale",
+      "pick_one": "Pick one",
+      "quickshop": {
+        "view": "Quick View"
+      }
+    },
+    "rating": {
+      "total_votes": "({votes})"
+    },
+    "price": {
+      "with_tax": "(Inc. {tax_label})",
+      "without_tax": "(Ex. {tax_label})",
+      "you_save": "(You save {amount})"
+    },
+    "contact": {
+      "full_name": "Full Name",
+      "full_name_placeholder": "Full Name",
+      "phone": "Phone Number",
+      "phone_placeholder": "Phone Number",
+      "email": "Email Address",
+      "email_placeholder": "Email Address",
+      "order": "Order Number",
+      "order_placeholder": "Order Number",
+      "company": "Company Name",
+      "company_placeholder": "Company Name",
+      "rma": "RMA Number",
+      "rma_placeholder": "RMA Number",
+      "captcha": "Are you human?",
+      "captcha_placeholder": "Captcha",
+      "question": "Comments/Questions",
+      "question_placeholder": "Enter your comments here",
+      "submit": "Submit Message",
+      "successful": "We've received your feedback and will respond shortly if required. <a href=\"{shopPath}\">Continue</a>."
+    },
+    "giftcard": {
+      "heading": "Gift Certificates",
+      "purchase": {
+        "heading": "Purchase Gift Certificate",
+        "subheading": "This gift certificate will be emailed to the recipient after your order has been paid for.",
+        "to_name": "Recipient's Name",
+        "to_email": "Recipient's Email",
+        "from_name": "Your Name",
+        "from_email": "Your Email",
+        "message": "Message (optional)",
+        "amount": "Amount",
+        "preview": "Preview Theme",
+        "theme": "Gift Certificate Theme",
+        "custom_range": "(Value must be between {min} and {max})",
+        "agree": "I understand that Gift Certificates expire after {days, plural, one {1 day} other {# days}}",
+        "agree2": "I agree that Gift Certificates are nonrefundable",
+        "submit_value": "Add Gift Certificate to Cart",
+        "update_value": "Update Gift Certificate"
+      },
+      "balance": {
+        "heading": "Check Gift Certificate Balance",
+        "subheading": "You can check the balance of a gift certificate by typing the code in to the box below.",
+        "code": "Gift Certificate Code",
+        "submit_value": "Check Balance"
+      },
+      "redeem": {
+        "heading": "Redeem Gift Certificate",
+        "subheading": "To redeem a gift certificate at {store_name}, follow the simple steps below.",
+        "item1": "You need your unique gift certificate code, which is part of the gift certificate that was emailed to you as an attachment. It will look something like Z50-Y6K-COS-402.",
+        "item2": "Browse the store and add items to your cart as you normally would.",
+        "item3": "Click the '<a href=\"{cart_url}\">View Cart</a>' link to view the contents of your shopping cart.",
+        "item4": "Type your gift certificate code in to the 'Redeem Gift Certificate' box and click 'Go'."
+      }
+    },
+    "account": {
+      "common": {
+        "yes": "Yes",
+        "no": "No",
+        "edit": "Edit",
+        "delete": "Delete",
+        "share": "Share",
+        "required": "Required",
+        "cancel": "Cancel",
+        "store_credit": "You have <strong>{store_credit}</strong> of store credit. To use it, simply place your order and you will be able to choose store credit as the payment method when it comes time to pay for your order."
+      },
+      "menu": {
+        "orders": "Orders",
+        "returns": "Returns",
+        "addresses": "Addresses",
+        "wishlists": "Wishlists",
+        "recently_viewed": "Recently Viewed",
+        "settings": "Account Settings",
+        "messages": "Messages"
+      },
+      "receipt": {
+        "heading": "Order #{number}",
+        "billing_title": "Bill To",
+        "shipping_title": "Ship To",
+        "ship_to_multi_text": "Order will be shipped to multiple addresses.",
+        "actions": {
+          "print_invoice": "Print Invoice",
+          "reorder_items": "Reorder",
+          "return_items": "Request Return"
+        },
+        "items": {
+          "title": "Items",
+          "product_title": "{quantity} × {name}",
+          "options": "Options",
+          "customizations": "Customizations",
+          "gift_wrapping": "Gift wrapping",
+          "refunded": "Refunded",
+          "reorder": "Reorder",
+          "download": "Download items"
+        },
+        "shipments": {
+          "title": "Shipments",
+          "date": "Date",
+          "provider": "Provider",
+          "link": "Tracking Number"
+        }
+      },
+      "return": {
+        "heading": "Return Items from Order #{id}",
+        "empty": "This order contains no products that can be returned. Have you already returned all of the items within this order?",
+        "order_item": "Item",
+        "item_price": "Price",
+        "quantity": "Qty To Return",
+        "reason": "Return Reason",
+        "action": "Return Action",
+        "comments": "Comments",
+        "request_return": "Submit Return Request"
+      },
+      "download": {
+        "heading": "{name} (#{number})",
+        "expired": "File has expired",
+        "days_remaining": "{days} days remaining",
+        "downloads_remaining": "{downloads} downloads remaining"
+      },
+      "invoice": {
+        "heading": "Order #{number}",
+        "billing_title": "Bill To",
+        "product_title": "Item",
+        "quantity_title": "Quantity",
+        "price_title": "Price",
+        "giftwrap": "Giftwrapping",
+        "quantity": "{quantity} × {price}"
+      },
+      "orders": {
+        "heading_all": "Orders",
+        "heading_completed": "Completed Orders",
+        "view_all": "View All",
+        "items": {
+          "number": "Order #{number}",
+          "description": "{num_products, plural, one {1 item} other {# items}} totaling {cost}",
+          "placed": "Placed On",
+          "updated": "Updated On",
+          "empty": "You haven't placed any orders yet."
+        }
+      },
+      "addresses": {
+        "heading": "Addresses",
+        "add_heading": "Add New Address",
+        "edit_heading": "Edit Address",
+        "primary": "Primary",
+        "phone": "Phone: {phone_number}",
+        "new_address": "New Address",
+        "no_addresses": "You currently have no addresses added to your profile",
+        "submit": "Save Address"
+      },
+      "wishlists": {
+        "heading": "Wishlists",
+        "new": "New Wishlist",
+        "num_items": "# Items",
+        "add_item": "Add to wishlist",
+        "wishlist_name": "Wishlist Name",
+        "make_public": "Make wishlist public",
+        "public": "Public",
+        "action": "Action",
+        "add": "Add Wishlist",
+        "delete_all": "Delete All",
+        "edit": "Edit Wishlist",
+        "view_heading": "Wishlist: {name}",
+        "share_intro": "Share this wishlist with friends",
+        "wishlist_contents": "Wishlist Contents",
+        "num_products": "{num_products, plural, one {1 product} other {# products}}",
+        "create": "Create Wishlist",
+        "save": "Save Wishlist",
+        "compare": "Compare",
+        "empty": "You have no wishlists.",
+        "details_empty": "There are no items in this wishlist."
+      },
+      "recent_items": {
+        "heading": "Recently Viewed",
+        "compare": "Compare",
+        "empty": "You haven't viewed any items recently."
+      },
+      "returns": {
+        "heading": "Returns",
+        "successful": "Your return was submitted successfully. We'll respond as soon as we can.",
+        "no_returns": "You haven't made any returns yet.",
+        "list": {
+          "title": "{quantity} × {name}",
+          "number": "Return #{number}",
+          "date": "Requested",
+          "action": "Action",
+          "reason": "Reason",
+          "comments": "Comments"
+        },
+        "status": {
+          "pending": "Pending",
+          "received": "Received",
+          "authorized": "Authorized",
+          "repaired": "Repaired",
+          "refunded": "Refunded",
+          "rejected": "Rejected",
+          "cancelled": "Cancelled"
+        }
+      },
+      "settings": {
+        "heading": "Account Settings",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "company": "Company",
+        "phone": "Phone Number",
+        "submit": "Update Details"
+      },
+      "messages": {
+        "heading": "Messages",
+        "customer_said": "You said:",
+        "merchant_said": "{store_name} said:",
+        "no_messages": "You have no messages at this time.",
+        "list": {
+          "message_date": "Date",
+          "message_subject": "Subject",
+          "message_name": "Message"
+        }
+      },
+      "inbox": {
+        "order": "Order",
+        "order_pick_one": "Select an order...",
+        "order_display": "Order #{id} / {date} / {total}",
+        "subject": "Subject",
+        "message": "Message",
+        "show_form": "Send Message",
+        "submit": "Send Message",
+        "clear": "Clear"
+      },
+      "products": {
+        "current_stock": "Current Stock:",
+        "quantity": "Quantity:",
+        "quantity_decrease": "Decrease Quantity:",
+        "quantity_increase": "Increase Quantity:",
+        "related_products": "Related Products",
+        "top": "Most Popular Products",
+        "similar_by_views": "Customers Also Viewed",
+        "featured": "Featured Products",
+        "new": "New Products",
+        "tabs": {
+          "details": "Details",
+          "reviews": "Reviews",
+          "delivery": "Delivery"
+        },
+        "reviews": {
+          "captcha_heading": "Security Question",
+          "hide": "Hide Reviews",
+          "new": "Write a Review",
+          "show": "Show Reviews",
+          "header": "{total, plural, =0{0 Reviews} one {# Review} other {# Reviews}}",
+          "rating_label": "Rating",
+          "link_to_review": "({total, plural, =0{No reviews yet} one {# review} other {# reviews}})",
+          "post_on_by": "Posted by { name } on { date }",
+          "select_rating": "Select Rating",
+          "anonymous_poster": "Unknown",
+          "rating": {
+            "1": "1 star (worst)",
+            "2": "2 stars",
+            "3": "3 stars (average)",
+            "4": "4 stars",
+            "5": "5 stars (best)"
+          },
+          "write_a_review": "Write a Review",
+          "form_write": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Review Subject",
+            "comments": "Comments",
+            "submit_value": "Submit Review"
+          }
+        },
+        "videos": {
+          "header": "Videos",
+          "hide": "Hide Videos",
+          "show": "Show Videos"
+        },
+        "add_to_cart": "Add to Cart",
+        "options": "Options",
+        "sku": "SKU",
+        "condition": "Condition",
+        "availability": "Availability",
+        "shipping": "Shipping Cost",
+        "shipping_fixed": "{amount} (Fixed Shipping Cost)",
+        "shipping_free": "Free Shipping",
+        "sold_out": "Sold Out",
+        "pre_order": "Pre-Order Now",
+        "choose_options": "Choose Options",
+        "quick_view": "Quick view",
+        "compare": "Compare",
+        "upload": "Upload",
+        "max_filesize": "Maximum file size is: {bytes}KB",
+        "filetypes": "File types are: {file_types}",
+        "choose_an_option": "Please choose an option",
+        "select_one": "Please select one",
+        "description": "Description",
+        "retail_price": "MSRP {price}",
+        "price_with_tax": "{price} (Inc. {tax_label})",
+        "price_without_tax": "{price} (Ex. {tax_label})",
+        "weight": "Weight",
+        "you_save": "(You save {amount})"
+      }
+    },
+    "invoice": {
+      "for_order": "{name} Invoice for Order #{id}",
+      "phone": "Phone: {number}",
+      "email": "Email: {email}",
+      "order": "Order:",
+      "payment_method": "Payment Method:",
+      "order_date": "Order Date:",
+      "shipping_method": "Shipping Method:",
+      "order_items": "Order Items",
+      "qty": "Qty",
+      "code": "Code/SKU",
+      "shipping_address": "Shipping Address",
+      "product_name": "Product Name",
+      "price": "Price",
+      "total": "Total",
+      "comments": "Comments"
+    },
+    "auth": {
+      "login": {
+        "login_form": {
+          "heading": "Log in",
+          "email_address": "Email Address",
+          "password": "Password",
+          "submit": "Log In",
+          "forgot_password": "Forgot password?"
+        },
+        "create_form": {
+          "heading": "New Customer",
+          "intro": "Create an account with us and you'll be able to:",
+          "fact_faster": "Check out faster",
+          "fact_addresses": "Save multiple shipping addresses",
+          "fact_order_history": "Access your order history",
+          "fact_track_orders": "Track new orders",
+          "fact_wishlist": "Save items to your wish list",
+          "create_account": "Create Account"
+        }
+      },
+      "create": {
+        "heading": "Create Account",
+        "submit": "Create Account"
+      },
+      "created": {
+        "heading": "Account Created",
+        "message": "Your <em>{store_name}</em> account was created with the email address: <em>{email}</em>",
+        "continue": "Continue"
+      },
+      "new_password": {
+        "heading": "New Password",
+        "password": "New Password",
+        "password2": "Confirm Password",
+        "submit": "Update Password",
+        "passwords_no_match": "Your passwords do not match."
+      },
+      "forgot": {
+        "heading": "Forgot Password",
+        "message": "Fill in your email below to request a new password. An email will be sent to the address below containing a link to verify your email address.",
+        "email_address": "Email Address",
+        "submit": "Reset Password"
+      }
+    },
+    "unavailable": {
+      "maintenance_heading": "Down for maintenance",
+      "maintenance_message": "This store is currently unavailable due to maintenance. It should be available again shortly. We apologize for any inconvenience caused.",
+      "hibernation_heading": "We'll be back",
+      "hibernation_message": "Thanks for visiting. Our store is currently unavailable. We apologize for any inconvenience caused."
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{{!
+  Shows a product's price.
+
+  Prices are fairly complicated. Besides having to be able to show the price
+  with and without tax, a merchant can also assign a Recommended Retail Price,
+  and a Sale Price.
+
+  This means that in extreme cases, we have to show 4 different prices at once.
+
+  When a Sale Price is set we do not have direct access to it--instead it
+  overwrites the regular price.
+
+  @param price object
+
+  @param show_savings bool
+         If true, show a label saying how much is saved from the full price.
+}}
+{{#if price}}
+  <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    {{#if schema_org}}
+      <meta itemprop="priceCurrency" content="{{currency_selector.active_currency_code}}">
+
+      {{#if price.without_tax}}
+        <meta itemprop="price" content="{{price.without_tax.value}}">
+      {{else}}
+        <meta itemprop="price" content="{{price.with_tax.value}}">
+      {{/if}}
+    {{/if}}
+
+
+    {{#if price.without_tax}}
+      <span class="price-withouttax" data-price="without-tax">
+        {{#if price.rrp_without_tax}}
+          <span class="price-rrp" data-price-rrp="without-tax">
+            {{price.rrp_without_tax.formatted}}
+          </span>
+        {{/if}}
+
+        <span class="price-value" data-price-value="without-tax">
+          {{price.without_tax.formatted}}
+        </span>
+
+        {{#if price.with_tax}}
+          <span class="price-tax-label">{{lang 'core.price.without_tax' tax_label=price.tax_label}}</span>
+        {{/if}}
+      </span>
+    {{/if}}
+
+
+    {{#if price.with_tax}}
+      <span class="price-withtax" data-price="with-tax">
+        {{#if price.rrp_with_tax}}
+          <span class="price-rrp" data-price-rrp="with-tax">
+            {{price.rrp_with_tax.formatted}}
+          </span>
+        {{/if}}
+
+        <span class="price-value" data-price-value="with-tax">
+          {{price.with_tax.formatted}}
+        </span>
+
+        {{#if price.without_tax}}
+          <span class="price-tax-label">{{lang 'core.price.with_tax' tax_label=price.tax_label}}</span>
+        {{/if}}
+      </span>
+    {{/if}}
+
+
+    {{#if show_savings}}
+      {{#if price.saved}}
+        <span class="price-saved" data-price-saved>
+          {{lang 'core.price.you_save' amount=price.saved.formatted}}
+        </span>
+      {{/if}}
+    {{/if}}
+  </div>
+{{/if}}

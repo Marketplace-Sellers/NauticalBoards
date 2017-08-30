@@ -1,0 +1,28 @@
+<div class="sorting-form">
+  <form class="product-sort-select" method="get" data-sort-by>
+    <div class="form-field form-inline">
+        <label class="form-label" for="sort">{{lang 'common.sorter.sort_by'}}</label>
+        <div class="form-select-wrapper">
+          <select class="form-select dyna-width" name="sort" id="sort">
+            <option value="featured" {{#compare sort 'featured' operator='==='}}selected{{/compare}}>{{lang 'common.sorter.featured'}}</option>
+            <option value="newest" {{#compare sort 'newest' operator='==='}}selected{{/compare}}>{{lang 'common.sorter.newest'}}</option>
+            <option value="bestselling" {{#compare sort 'bestselling' operator='==='}}selected{{/compare}}>{{lang 'common.sorter.top_sellers'}}</option>
+            <option value="alphaasc" {{#compare sort 'alphaasc' operator='==='}}selected{{/compare}}>{{lang 'common.sorter.alpha_asc'}}</option>
+            <option value="alphadesc" {{#compare sort 'alphadesc' operator='==='}}selected{{/compare}}>{{lang 'common.sorter.alpha_desc'}}</option>
+            <option value="avgcustomerreview" {{#compare sort 'avgcustomerreview' operator='==='}}selected{{/compare}}>{{lang 'common.sorter.reviews'}}</option>
+            <option value="priceasc" {{#compare sort 'priceasc' operator='==='}}selected{{/compare}}>{{lang 'common.sorter.price_asc'}}</option>
+            <option value="pricedesc" {{#compare sort 'pricedesc' operator='==='}}selected{{/compare}}>{{lang 'common.sorter.price_desc'}}</option>
+          </select>
+        </div>
+    </div>
+  </form>
+</div>
+
+{{#if show_compare}}
+  <div class="compare-form">
+    <div class="form-field form-inline">
+      <span class="compare-count"></span><input class="compare-button"
+      type="submit" value="{{lang 'product.compare_selected'}}">
+    </div>
+  </div>
+{{/if}}

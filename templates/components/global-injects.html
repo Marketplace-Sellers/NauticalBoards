@@ -1,0 +1,34 @@
+{{!-- form validation --}}
+{{inject 'validationRequired' (lang 'forms.validation.required')}}
+{{inject 'validationEmail' (lang 'forms.validation.email')}}
+{{inject 'validationNumber' (lang 'forms.validation.number')}}
+{{inject 'validationNumMax' (lang 'forms.validation.num_max')}}
+{{inject 'validationNumMin' (lang 'forms.validation.num_min')}}
+{{inject 'validationNumRange' (lang 'forms.validation.num_range')}}
+{{inject 'validationMaxLength' (lang 'forms.validation.max_length')}}
+{{inject 'validationMinLength' (lang 'forms.validation.min_length')}}
+{{inject 'validationMaxChecked' (lang 'forms.validation.max_checked')}}
+{{inject 'validationMinChecked' (lang 'forms.validation.min_checked')}}
+{{inject 'validationMaxSelected' (lang 'forms.validation.max_selected')}}
+{{inject 'validationMinSelected' (lang 'forms.validation.min_selected')}}
+{{inject 'validationNotEqual' (lang 'forms.validation.not_equal')}}
+{{inject 'validationDifferent' (lang 'forms.validation.different')}}
+
+{{!-- product strings --}}
+{{inject 'addSuccess' (lang 'product.success')}}
+{{inject 'addToCart' (lang 'product.add_to_cart')}}
+{{inject 'productYouSave' (lang 'core.price.you_save' amount='{amount}')}}
+{{inject 'productIncludingTax' (lang 'product.including_tax')}}
+{{inject 'productExcludingTax' (lang 'product.excluding_tax')}}
+{{inject 'cartLink' (lang 'product.cart_link')}}
+{{inject 'checkoutLink' (lang 'product.checkout_link')}}
+{{inject 'errorMessageGeneral' (lang 'product.error_message_general')}}
+{{inject 'homeLink' (lang 'product.home_link')}}
+{{inject 'outOfStock' (lang 'product.error_message_stock')}}
+{{inject 'preOrder' (lang 'product.pre_order')}}
+{{inject 'soldOut' (lang 'product.sold_out')}}
+{{inject 'quantityAlertLessThan' (lang 'product.quantity_alert_less_than_error' value='{value}' min='{min}')}}
+{{inject 'quantityAlertMoreThan' (lang 'product.quantity_alert_less_than_error' value='{value}' max='{max}')}}
+
+{{inject 'urlsCart' urls.cart}}
+{{inject 'urlsCheckout' urls.checkout.single_address}}

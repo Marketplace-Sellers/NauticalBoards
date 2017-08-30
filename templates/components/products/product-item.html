@@ -1,0 +1,61 @@
+{{!
+  @param default_image A default product image.
+}}
+<article class="product-item">
+  <a class="product-item-link" href="{{url}}">
+    <figure class="product-item-thumbnail">
+      {{#if quick_shop}}
+        <span class="quick-shop-trigger" data-quick-shop data-product-id="{{id}}">
+          {{lang 'product.quick_shop'}}
+        </span>
+      {{/if}}
+
+      <img
+        class="product-item-image"
+        src="{{getImage image 'medium' (cdn default_image)}}"
+        alt="{{image.alt}}"
+        title="{{image.alt}}"
+      >
+
+      {{#if price.saved}}
+        <span class="product-item-sale">{{lang 'product.sale'}}</span>
+      {{/if}}
+    </figure>
+
+    <div class="product-item-details">
+      <h3 class="product-item-title">{{name}}</h3>
+      {{> components/products/price
+        show_tax_labels=true
+        price_as_low_as=price_as_low_as
+      }}
+    </div>
+  </a>
+
+  {{#if show_compare}}
+    <div
+      class="form-inline
+      form-field
+      form-field-options
+      form-field-checkbox
+      product-item-compare"
+    >
+      <div class="form-field-control">
+        <label
+          class="form-label {{class}}"
+          for="compare-{{id}}"
+          data-text="{{lang "product.compare"}}"
+          data-alt-text="{{lang "product.comparing"}}"
+        >
+          <input
+            class="form-input form-checkbox"
+            type="checkbox"
+            name="products[]"
+            value="{{id}}"
+            id="compare-{{id}}"
+          >
+          <span class="form-label-text">{{lang 'product.compare'}}</span>
+        </label>
+      </div>
+    </div>
+  {{/if}}
+</article>

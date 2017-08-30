@@ -1,0 +1,29 @@
+<div class="pagination-wrapper">
+  <ul class="pagination">
+
+    {{#if previous}}
+      <li class="previous">
+        <a class="pagination-link" href="{{previous}}">{{lang 'pagination.previous'}}</a>
+      </li>
+    {{/if}}
+
+    {{#if links.length}}
+      {{#each links}}
+        <li class="pagination-part">
+          {{#if ../current "!==" number}}
+            <a class="pagination-link" href="{{url}}">{{number}}</a>
+          {{else}}
+            <span class="pagination-disabled">{{number}}</span>
+          {{/if}}
+        </li>
+      {{/each}}
+    {{/if}}
+
+    {{#if next}}
+      <li class="next">
+        <a class="pagination-link" href="{{next}}">{{lang 'pagination.next'}}</a>
+      </li>
+    {{/if}}
+
+  </ul>
+</div>

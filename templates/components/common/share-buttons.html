@@ -1,0 +1,70 @@
+{{#if share_buttons}}
+  <nav class="share-buttons-nav">
+    <h2 class="share-heading"><span>{{lang 'blog.share_this'}}</span></h2>
+    <ul class="share-buttons" data-share-buttons>
+
+      {{#each share_buttons.buttons}}
+
+        {{#if service '===' 'facebook'}}
+          <li class="social-link facebook">
+            <a target="_blank" href="http://www.facebook.com/sharer.php?u={{../../url}}"
+            class="facebook"></a>
+          </li>
+        {{/if}}
+
+        {{#if service '===' 'twitter'}}
+          <li class="social-link twitter">
+            <a target="_blank" href="https://twitter.com/share?url={{../../url}}&amp;text={{../../title}}" class="twitter"></a>
+          </li>
+        {{/if}}
+
+        {{#if service '===' 'google_plusone'}}
+          <li class="social-link google-plus">
+            <a target="_blank" href="https://plus.google.com/share?url={{../../url}}"
+            class="google"></a>
+          </li>
+        {{/if}}
+
+        {{#if service '===' 'linkedin'}}
+          <li class="social-link linkedin">
+            <a target="_blank" href="http://www.linkedin.com/shareArticle?url={{../../url}}&amp;title={{../../title}}"
+            class="linkedin"></a>
+          </li>
+        {{/if}}
+
+        {{#if service '===' 'email'}}
+          <li class="social-link mail">
+            <a href="mailto:?subject={{../../title}}&amp;body={{../../url}}"
+            class="email"></a>
+          </li>
+        {{/if}}
+
+        {{#if service '===' 'print'}}
+          <li class="social-link print">
+            <a class="print" href="javascript:;" onclick="window.print()"></a>
+          </li>
+        {{/if}}
+
+        {{#if service '===' 'pinterest'}}
+          <li class="social-link pinterest">
+            <a target="_blank" href="//pinterest.com/pin/create/button/?url={{../../url}}&amp;media={{../../image}}&amp;description={{../../title}}" class="share-pinterest"></a>
+          </li>
+        {{/if}}
+      {{/each}}
+      {{#each share_buttons.buttons}}
+
+        {{#if service '===' 'facebook_like'}}
+          <li class="social-link facebook-like">
+            <div class="fb-like"
+              data-href="{{../../url}}"
+              data-layout="button_count"
+              data-action="like"
+              data-show-faces="false">
+            </div>
+          </li>
+        {{/if}}
+
+      {{/each}}
+    </ul>
+  </nav>
+{{/if}}

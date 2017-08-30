@@ -1,0 +1,12 @@
+/*! Theme: Chelsea v1.14.0 */
+.subscribed {
+  margin-bottom: 60px;
+
+  @include breakpoint(m-up) {
+    margin-bottom: 100px;
+  }
+
+  .page-content {
+    text-align: center;
+  }
+}

@@ -1,0 +1,13 @@
+{{#if settings.account_creation_enabled}}
+  <span class="account-links">
+    {{#if customer}}
+      <a href="{{urls.account.index}}">{{lang 'header.logged_in_as' name=customer.shipping_address.first_name}}</a>
+      <span class="account-link-separator">&ndash;</span>
+      <a href="{{urls.auth.logout}}">{{lang 'header.log_out'}}</a>
+    {{else}}
+      <a href="{{urls.auth.create_account}}">{{lang 'header.sign_up'}}</a>
+      <span class="account-link-separator">&ndash;</span>
+      <a href="{{urls.auth.login}}">{{lang 'header.log_in'}}</a>
+    {{/if}}
+  </span>
+{{/if}}

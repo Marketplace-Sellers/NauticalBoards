@@ -1,0 +1,23 @@
+{{#if location '===' 'top'}}
+  {{#if this.top}}
+    <div class="banners banners-top">
+      {{#each this.top}}
+        <div class="banner rte">
+          {{{this}}}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+{{/if}}
+
+{{#if location '===' 'bottom'}}
+  {{#if this.bottom}}
+    <div class="banners banners-bottom">
+      {{#each this.bottom}}
+        <div class="banner rte">
+          {{{this}}}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+{{/if}}

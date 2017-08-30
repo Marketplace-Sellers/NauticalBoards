@@ -1,0 +1,93 @@
+<div class="cart-preview" id="cart-preview" data-count="{{cart.quantity}}">
+
+  {{#if cart.items}}
+    <div class="cart-preview-body">
+
+      <ul class="cart-preview-list">
+        {{#each cart.items}}
+          <li class="cart-preview-list-item">
+
+            <a class="cart-preview-list-item-remove" data-product-id="{{id}}" href="{{remove_url}}">&times;</a>
+
+            {{#if image}}
+              <div class="cart-preview-list-item-image-wrap">
+                <div class="cart-preview-list-item-image">
+                  <a href="{{url}}">
+                    <img src="{{getImage image 'thumbnail' default_image}}"/>
+                  </a>
+                </div>
+              </div>
+            {{else}}
+              <div class="cart-preview-list-item-image-wrap">
+                <div class="cart-preview-list-item-image">
+                  <a href="{{url}}">
+                    <img src="{{getImage image 'thumbnail' ../../theme_settings.default_image}}"/>
+                  </a>
+                </div>
+              </div>
+            {{/if}}
+
+            <div class="cart-preview-list-item-details">
+
+              <div class="cart-preview-list-item-brand">
+                {{brand.name}}
+              </div>
+
+              <div class="cart-preview-list-item-name">
+                <a href="{{url}}" alt="{{name}}">{{name}}</a>
+              </div>
+
+              {{#if options.length}}
+                <div class="cart-preview-list-options">
+                  {{#each options}}
+                    {{name}}:&nbsp;{{value}}{{#unless @last}}, {{/unless}}
+                  {{/each}}
+                </div>
+              {{/if}}
+
+              <div class="cart-preview-list-item-price">
+                <span class="{{#if price_discounted}}price-discounted{{/if}}">{{price.formatted}}</span>
+                {{#if price_discounted}}
+                  <span class="cart-item-discount">{{price_discounted.formatted}}</span>
+                {{/if}}
+                <span class="multiplier"> &times;</span> {{quantity}}
+              </div>
+            </div>
+
+          </li>
+        {{/each}}
+      </ul>
+
+    </div>
+
+    <div class="cart-preview-footer">
+      {{#if cart.discount.value "<" 0}}
+        <div class="cart-preview-discount">
+          <div class="cart-preview-total-price">
+            {{lang 'cart.discount'}} {{cart.discount.formatted}}
+          </div>
+        </div>
+      {{/if}}
+      {{#if cart.taxes}}
+        <div class="cart-preview-taxes">
+          {{#each cart.taxes}}
+          <div class="cart-preview-tax">
+            <div class="cart-preview-total-price">
+              {{name}} {{cost.formatted}}
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      {{/if}}
+      <div class="cart-preview-pricing">
+        <p class="cart-preview-total-price">{{lang 'header.total'}} &nbsp; {{{cart.grand_total.formatted}}}</p>
+      </div>
+      <a href="{{urls.cart}}" class="button secondary"><span>{{lang 'header.view_cart'}}</span></a>
+      <a href="{{urls.checkout.single_address}}" class="button">{{lang 'cart_preview.checkout.title'}}</a>
+    </div>
+
+  {{else}}
+    <p class="cart-preview-empty">{{lang 'cart_preview.checkout.empty_cart'}}</p>
+  {{/if}}
+  <div id="cart-preview-overlay" class="cart-preview-overlay"></div>
+</div>

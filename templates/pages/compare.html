@@ -1,0 +1,115 @@
+{{#partial "page"}}
+
+<div class="container">
+  <div class="content">
+    <h1 class="page-heading">{{lang 'compare.header'}} <strong>{{lang 'compare.num_of_items' products=comparisons.length}}</strong></h1>
+    {{> components/common/breadcrumbs breadcrumbs}}
+
+    <div class="container">
+
+        <table class="compare-table">
+          <tr class="compare-row">
+            <th class="compare-heading"></th>
+            {{#each comparisons}}
+              <th class="compare-product">
+                <figure class="card-figure">
+                  <a href="{{url}}">
+                    <img
+                      class="card-image"
+                      src="{{getImage image 'medium' ../theme_settings.default_image}}"
+                      alt="{{image.alt}}"
+                      title="{{image.alt}}"
+                    >
+                  </a>
+                </figure>
+              </th>
+            {{/each}}
+          </tr>
+          <tr class="compare-row details-row">
+            <th class="compare-heading"></th>
+            {{#each comparisons}}
+              <td class="compare-item">
+                <article class="compare-product-details">
+                  <h1 class="product-title">
+                    <a href="{{url}}">{{name}}</a>
+                  </h1>
+                  {{#if brand}}
+                    <a class="product-brand" href="{{brand.url}}">{{brand.name}}</a>
+                  {{/if}}
+                  {{> components/products/price
+                    price=price
+                    show_tax_labels=true
+                  }}
+                </article>
+              </td>
+            {{/each}}
+          </tr>
+          <tr class="compare-row cta-row">
+            <th class="compare-heading"></th>
+            {{#each comparisons}}
+              <td class="compare-item">
+                {{#if ../theme_settings.product-quick-shop}}
+                  <a class="button" href="{{url}}" data-quick-shop data-product-id="{{id}}">{{lang 'product.quick_shop'}}</a>
+                {{else}}
+                  <a class="button" href="{{url}}">{{lang 'product.view_product'}}</a>
+                {{/if}}
+                {{#if ../comparisons.length ">" 2}}
+                  <a class="compare-remove" href="{{remove_url}}">{{lang 'compare.stop_comparing'}}</a>
+                {{/if}}
+              </td>
+            {{/each}}
+          </tr>
+          <tr class="compare-row">
+            <th class="compare-heading">
+              {{lang 'compare.description'}}
+            </th>
+            {{#each comparisons}}
+              <td class="compare-item">{{{summary}}}</td>
+            {{/each}}
+          </tr>
+          <tr class="compare-row">
+            <th class="compare-heading">
+              {{lang 'compare.rating'}}
+            </th>
+            {{#each comparisons}}
+              <td class="compare-item">
+                {{#if rating}}
+                  {{> components/products/ratings rating=rating}}
+                {{else}}
+                  {{lang 'compare.no_reviews'}}
+                {{/if}}
+              </td>
+            {{/each}}
+          </tr>
+          <tr class="compare-row">
+            <th class="compare-heading">
+              {{lang 'compare.availability'}}
+            </th>
+            {{#each comparisons}}
+              <td class="compare-item">
+                {{#if availability}}
+                  {{availability}}
+                {{else}}
+                  {{lang 'compare.not_avail'}}
+                {{/if}}
+              </td>
+            {{/each}}
+          </tr>
+          {{#if custom_fields}}
+            {{#each custom_fields}}
+              <tr class="compare-row">
+                <th class="compare-heading">{{name}}</th>
+                {{#each comparisons}}
+                  <td class="compare-item">{{value}}</td>
+                {{/each}}
+              </tr>
+            {{/each}}
+          {{/if}}
+        </table>
+
+    </div>
+  </div>
+</div>
+
+{{/partial}}
+{{> layout/base}}

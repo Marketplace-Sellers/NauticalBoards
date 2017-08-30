@@ -1,0 +1,62 @@
+
+<div class="reviews">
+  {{#if product.reviews.total ">" 0}}
+    {{#each reviews.list}}
+      {{> components/products/review this review_count=../../theme_settings.product_review_count}}
+    {{/each}}
+    {{{snippet 'reviews'}}}
+  {{else}}
+    {{lang 'product.reviews.no_reviews'}}
+  {{/if}}
+  {{#if product.reviews.total ">" theme_settings.product_review_count}}
+   <button class="button" data-toggle-extra-reviews data-toggle-text="{{lang 'product.reviews.view_less'}}">{{lang 'product.reviews.view_all' count=product.reviews.list.length}}</button>
+ {{/if}}
+</div>
+
+<span class="button reviews-leave-review">{{lang 'product.reviews.leave_review'}}</span>
+
+<div class="reviews-form-wrapper">
+  <h2 class="section-title">{{lang 'product.reviews.write_review'}}</h2>
+  <form class="form reviews-form" action="{{urls.product.post_review}}" method="post">
+
+    {{!-- Stars --}}
+    <div class="form-field">
+      <label class="form-label" for="rating-rate">
+        <span class="form-field-title form-hidden">
+          {{lang 'product.reviews.form.select_a_rating'}}
+        </span>
+        <span class="form-select-wrapper">
+          <select id="rating-rate" class="form-input form-select" name="revrating">
+            <option value="">{{lang 'product.reviews.form.select_a_rating'}}</option>
+            {{#enumerate 1 5}}
+              <option value="{{this}}">{{lang 'product.reviews.stars_count' rating=this}}</option>
+            {{/enumerate}}
+          </select>
+        </span>
+      </label>
+    </div>
+
+    {{!-- Name --}}
+    {{> core/forms/common/text label=(lang 'product.reviews.form.name') name="revfromname" id="revfromname" required="true" prefill=(lang 'product.reviews.form.name')}}
+
+    {{!-- Email --}}
+    {{> core/forms/common/email label=(lang 'product.reviews.form.email') name="email" id="rating-email" required="true" prefill=(lang 'product.reviews.form.email')}}
+
+    {{!-- Subject --}}
+    {{> core/forms/common/text label=(lang 'product.reviews.form.subject') name="revtitle" id="rating-title" required="true" prefill=(lang 'product.reviews.form.subject')}}
+
+    {{!-- Comments --}}
+    {{> core/forms/common/multiline label=(lang 'product.reviews.form.comments') name="revtext" id="rating-comment" required="true" rows=6 prefill=(lang 'product.reviews.form.comments')}}
+
+    {{!-- Captcha --}}
+    {{{product.reviews.recaptcha.markup}}}
+
+    <input type="submit" class="form-submit button" value="{{lang 'product.reviews.form.submit'}}">
+
+    <input type="hidden" name="product_id" value="{{product.id}}" />
+    <input type="hidden" name="action" value="post_review" />
+    {{#if product.reviews.throttleToken}}
+      <input type="hidden" name="throttleToken" value="{{product.reviews.throttleToken}}">
+    {{/if}}
+  </form>
+</div>
