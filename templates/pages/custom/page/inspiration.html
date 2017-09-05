@@ -1,0 +1,32 @@
+{{#partial "page"}}
+
+<div class="container">
+  <article class="content cms-page">
+
+    <h1 class="page-heading">{{page.title}}</h1>
+    {{> components/common/breadcrumbs breadcrumbs}}
+
+    <div class="page-content rte">
+      {{#replace '%%Syndicate%%' page.content}}
+        {{> components/rss}}
+      {{else}}
+        {{{page.content}}}
+      {{/replace}}
+
+      {{#if page.feed}}
+        <ul class="rss-feed">
+          {{#each page.feed}}
+            <li class="rss-feed-item">
+              <h3><a href="{{url}}" target="_blank">{{title}}</a></h3>
+              <p>{{{content}}}</p>
+            </li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
+  </article>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}
